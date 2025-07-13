@@ -6,7 +6,7 @@
 }
 
 /* Header styling */
-.header {
+.navbar {
   width: 100%;
   background-image: linear-gradient(to right, #de6262, #ffb88c);
 }
