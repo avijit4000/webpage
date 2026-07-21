@@ -1,167 +1,627 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Avijit Biswas</title>
+    <meta name="description" content="Avijit Biswas — Senior AI Engineer specializing in LLM-powered systems, Agentic AI, and full-stack development.">
+    <title>Avijit Biswas | Senior AI Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="style.css">
   </head>
 
   <body>
-
-    <div class="header">
-      <div class="container-fluid">
-      <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="light">
-
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Avijit</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <header class="site-header sticky-top">
+      <div class="container-lg">
+        <nav class="navbar navbar-expand-lg px-0">
+          <a class="navbar-brand" href="#home">
+            <span class="brand-mark">AB</span>
+            <span class="brand-text">Avijit Biswas</span>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">About me</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Work Experience</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  More
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
+          <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+              <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+              <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+              <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+              <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+              <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+              <li class="nav-item ms-lg-3">
+                <a href="#contact" class="btn btn-primary btn-sm nav-cta">Contact Me</a>
               </li>
             </ul>
           </div>
-        </div>
-      </nav>
+        </nav>
       </div>
-    </div>
+    </header>
 
+    <main>
+      <!-- Hero -->
+      <section id="home" class="hero">
+        <div class="hero-bg"></div>
+        <div class="container-lg position-relative">
+          <div class="row align-items-center g-5">
+            <div class="col-lg-7">
+              <div class="hero-badge">
+                <span class="pulse-dot"></span>
+                Available for opportunities
+              </div>
+              <h1 class="hero-title">Avijit Biswas</h1>
+              <p class="hero-subtitle">Senior AI Engineer</p>
+              <p class="hero-tagline">
+                MSc Data Science &amp; Management — IIT Ropar &amp; IIM Amritsar &nbsp;·&nbsp; B-Tech
+              </p>
+              <p class="hero-desc">
+                I transform complex problems into intelligent, scalable solutions — building production-grade AI agents, LLM-powered applications, and full-stack systems that deliver real-world impact.
+              </p>
+              <div class="hero-actions">
+                <a href="#contact" class="btn btn-primary btn-lg">Get in Touch</a>
+                <a href="#projects" class="btn btn-outline-light btn-lg">View Projects</a>
+              </div>
+              <div class="hero-links">
+                <a href="mailto:avijit4000@gmail.com" title="Email"><i class="bi bi-envelope-fill"></i></a>
+                <a href="https://www.linkedin.com/in/avijit-biswas4000" target="_blank" rel="noopener" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                <a href="https://github.com" target="_blank" rel="noopener" title="GitHub"><i class="bi bi-github"></i></a>
+                <a href="https://www.kaggle.com" target="_blank" rel="noopener" title="Kaggle"><i class="bi bi-bar-chart-fill"></i></a>
+                <a href="https://leetcode.com" target="_blank" rel="noopener" title="LeetCode"><i class="bi bi-code-slash"></i></a>
+                <a href="https://www.avibiswas.in/" target="_blank" rel="noopener" title="Website"><i class="bi bi-globe2"></i></a>
+              </div>
+            </div>
+            <div class="col-lg-5">
+              <div class="hero-photo-wrap">
+                <div class="hero-photo-ring"></div>
+                <div class="hero-photo">
+                  <img src="images/1.jpg" alt="Avijit Biswas">
+                </div>
+                <div class="hero-float-card card-1">
+                  <i class="bi bi-robot"></i>
+                  <div>
+                    <strong>5.5+ yrs</strong>
+                    <span>AI Engineering</span>
+                  </div>
+                </div>
+                <div class="hero-float-card card-2">
+                  <i class="bi bi-cloud-check-fill"></i>
+                  <div>
+                    <strong>Azure &amp; AWS</strong>
+                    <span>Cloud Native</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
+      <!-- About -->
+      <section id="about" class="section">
+        <div class="container-lg">
+          <div class="row g-5 align-items-start">
+            <div class="col-lg-5">
+              <span class="section-label">About Me</span>
+              <h2 class="section-title">Building intelligent systems that scale.</h2>
+              <p class="text-muted">
+                Full Stack AI Engineer with 5.5+ years of experience building and deploying production-grade AI applications, Agentic AI workflows, LLM-powered systems, and scalable web applications.
+              </p>
+            </div>
+            <div class="col-lg-7">
+              <div class="about-card">
+                <p>
+                  Proven expertise in AI agent orchestration, RAG pipelines, React-based frontend development, API integrations, cloud-native architectures, and end-to-end application development — delivering scalable, high-performance solutions for complex business problems.
+                </p>
+                <p class="mb-0">
+                  My focus is on building robust, user-centric applications that seamlessly move from development to deployment while delivering measurable real-world impact using Python, React, FastAPI, Azure OpenAI, Amazon Bedrock, Docker, and Kubernetes.
+                </p>
+              </div>
+              <div class="row g-3 mt-2">
+                <div class="col-sm-6">
+                  <div class="info-tile">
+                    <i class="bi bi-geo-alt-fill"></i>
+                    <div>
+                      <span class="info-label">Location</span>
+                      <span class="info-value">Bangalore, India</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="info-tile">
+                    <i class="bi bi-telephone-fill"></i>
+                    <div>
+                      <span class="info-label">Phone</span>
+                      <span class="info-value">+91 7908023338</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="info-tile">
+                    <i class="bi bi-envelope-fill"></i>
+                    <div>
+                      <span class="info-label">Email</span>
+                      <span class="info-value">avijit4000@gmail.com</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="info-tile">
+                    <i class="bi bi-translate"></i>
+                    <div>
+                      <span class="info-label">Languages</span>
+                      <span class="info-value">English, Hindi, Bengali, Mandarin</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
+      <!-- Skills -->
+      <section id="skills" class="section section-alt">
+        <div class="container-lg">
+          <div class="text-center mb-5">
+            <span class="section-label">Technical Skills</span>
+            <h2 class="section-title">Tools &amp; Technologies</h2>
+          </div>
 
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div class="skill-group">
+                <div class="skill-group-header">
+                  <i class="bi bi-cpu-fill"></i>
+                  <h3>AI &amp; ML</h3>
+                </div>
+                <div class="skill-tags">
+                  <span>LLM</span><span>Agentic AI</span><span>RAG</span><span>LangChain</span>
+                  <span>LangGraph</span><span>LangSmith</span><span>OpenAI</span><span>Azure OpenAI</span>
+                  <span>Hugging Face</span><span>PyTorch</span><span>NLP</span><span>Deep Learning</span>
+                  <span>Computer Vision</span><span>Generative AI</span><span>Prompt Engineering</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="skill-group">
+                <div class="skill-group-header">
+                  <i class="bi bi-code-square"></i>
+                  <h3>Languages &amp; Frameworks</h3>
+                </div>
+                <div class="skill-tags">
+                  <span>Python</span><span>JavaScript</span><span>React</span><span>FastAPI</span>
+                  <span>Node.js</span><span>Django</span><span>Flask</span><span>SQL</span>
+                  <span>PostgreSQL</span><span>MongoDB</span><span>GraphQL</span><span>gRPC</span>
+                  <span>REST APIs</span><span>asyncio</span><span>R</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="skill-group">
+                <div class="skill-group-header">
+                  <i class="bi bi-cloud-fill"></i>
+                  <h3>Cloud &amp; DevOps</h3>
+                </div>
+                <div class="skill-tags">
+                  <span>AWS</span><span>Azure</span><span>GCP</span><span>Docker</span>
+                  <span>Kubernetes</span><span>CI/CD</span><span>Jenkins</span><span>Kafka</span>
+                  <span>Redis</span><span>Snowflake</span><span>Databricks</span><span>Git</span>
+                  <span>DevOps</span><span>LLMOps</span><span>JWT / RBAC</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="skill-group">
+                <div class="skill-group-header">
+                  <i class="bi bi-database-fill"></i>
+                  <h3>Vector DBs &amp; Data</h3>
+                </div>
+                <div class="skill-tags">
+                  <span>Pinecone</span><span>Chroma DB</span><span>FAISS</span><span>Pandas</span>
+                  <span>NumPy</span><span>Azure Data Lake</span><span>Tableau</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="skill-group">
+                <div class="skill-group-header">
+                  <i class="bi bi-tools"></i>
+                  <h3>Developer Tools</h3>
+                </div>
+                <div class="skill-tags">
+                  <span>Postman</span><span>VS Code</span><span>HTML5</span><span>CSS3</span>
+                  <span>Bootstrap</span><span>Streamlit</span><span>AutoGen</span><span>LoRA</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-    <div id="carouselExampleIndicators" class="carousel slide mt-5 mb-5">
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6" aria-label="Slide 7"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="7" aria-label="Slide 8"></button>
+      <!-- Experience -->
+      <section id="experience" class="section">
+        <div class="container-lg">
+          <div class="text-center mb-5">
+            <span class="section-label">Career</span>
+            <h2 class="section-title">Professional Experience</h2>
+          </div>
+
+          <div class="timeline">
+            <article class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-card">
+                <div class="timeline-header">
+                  <div>
+                    <h3>Sr. AI Engineer</h3>
+                    <p class="company">WIPRO (Optum, USA) · Hybrid USA / India</p>
+                  </div>
+                  <span class="timeline-date">Jun 2025 – May 2026</span>
+                </div>
+                <ul>
+                  <li>Designed, developed, and deployed production-grade AI agents, LLM-powered applications, and intelligent automation using Azure OpenAI, LangChain, AutoGen, RAG, fine-tuning, and LoRA.</li>
+                  <li>Built agentic AI systems with multi-step reasoning, tool calling, workflow orchestration, and autonomous decision-making for enterprise-scale workflows.</li>
+                  <li>Developed scalable end-to-end AI applications using Python, FastAPI, React, Azure, and Databricks with CI/CD (Jenkins), observability, and LLMOps best practices.</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-card">
+                <div class="timeline-header">
+                  <div>
+                    <h3>Data Scientist</h3>
+                    <p class="company">Hexaware Technologies · Remote, Pune</p>
+                  </div>
+                  <span class="timeline-date">Dec 2024 – Jun 2025</span>
+                </div>
+                <ul>
+                  <li>Developed a smart tutor application using FastAPI and Amazon Bedrock with continuous voice interaction, enabling AI-driven teaching that understands PDF content and delivers interactive learning experiences.</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-card">
+                <div class="timeline-header">
+                  <div>
+                    <h3>Researcher</h3>
+                    <p class="company">National Chung Cheng University · Taiwan</p>
+                  </div>
+                  <span class="timeline-date">May – Jun 2024</span>
+                </div>
+                <ul>
+                  <li>AI-driven research on data interpretation, analyzing structured and unstructured data for market predictions.</li>
+                  <li>Integrated APIs to support research models, fine-tuned using HuggingFace; visualized LLM advancements with Tableau.</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-card">
+                <div class="timeline-header">
+                  <div>
+                    <h3>Research Project</h3>
+                    <p class="company">iHub – AWaDH @ IIT Ropar · India</p>
+                  </div>
+                  <span class="timeline-date">Sep 2023 – Mar 2024</span>
+                </div>
+                <ul>
+                  <li>Conducted research in artificial intelligence and sustainable development, contributing to data-driven innovation projects.</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-card">
+                <div class="timeline-header">
+                  <div>
+                    <h3>Engineer</h3>
+                    <p class="company">CadMax (Autoliv) · Bangalore</p>
+                  </div>
+                  <span class="timeline-date">Mar – Jul 2023</span>
+                </div>
+                <ul>
+                  <li>Utilized MySQL, Tableau, Python, and R for statistical analysis, clustering, time series forecasting, and model fine-tuning.</li>
+                  <li>Built predictive models using Transformers, Logistic Regression, XGBoost, and SVM.</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-card">
+                <div class="timeline-header">
+                  <div>
+                    <h3>Consultant – Development Engineer</h3>
+                    <p class="company">L&amp;T Technology Services (SCANIA) · Bangalore</p>
+                  </div>
+                  <span class="timeline-date">Jan 2022 – Mar 2023</span>
+                </div>
+                <ul>
+                  <li>Developed and deployed ML models for the Customized Truck Development department with hypothesis testing and performance validation.</li>
+                  <li>Containerized applications for consistent environments and efficient deployment across development and production.</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-card">
+                <div class="timeline-header">
+                  <div>
+                    <h3>Graduate Consultant</h3>
+                    <p class="company">ISRO – ISTRAC · Bangalore</p>
+                  </div>
+                  <span class="timeline-date">Jan 2017 – Jan 2018</span>
+                </div>
+                <ul>
+                  <li>Applied Data Science techniques to validate algorithms and satellite data, improving data quality and visualization using Python, Pandas, NumPy, Matplotlib, Seaborn, and scikit-learn.</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-card">
+                <div class="timeline-header">
+                  <div>
+                    <h3>Internship Trainee</h3>
+                    <p class="company">Bharat Electronics Limited · Bangalore</p>
+                  </div>
+                  <span class="timeline-date">Jul – Aug 2015</span>
+                </div>
+                <ul>
+                  <li>Worked on Drive-in Antenna System during internship training program.</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section id="projects" class="section section-alt">
+        <div class="container-lg">
+          <div class="text-center mb-5">
+            <span class="section-label">Portfolio</span>
+            <h2 class="section-title">Featured Projects</h2>
+            <p class="text-muted mx-auto section-desc">Production-grade AI systems built with cutting-edge LLM and agentic technologies.</p>
+          </div>
+
+          <div class="row g-4">
+            <div class="col-md-6">
+              <article class="project-card">
+                <div class="project-icon"><i class="bi bi-diagram-3-fill"></i></div>
+                <h3>OrchestrAI</h3>
+                <p class="project-sub">Multi-Agent Data Intelligence Chatbot</p>
+                <p>MCP-powered, Agent-to-Agent intelligent chatbot that autonomously collects and synchronizes data from multiple sources using distributed agents. Performs real-time analysis and delivers unified, OAuth-authenticated, context-aware insights.</p>
+                <div class="project-tags">
+                  <span>Agentic AI</span><span>MCP</span><span>A2A</span><span>OAuth</span>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-6">
+              <article class="project-card">
+                <div class="project-icon"><i class="bi bi-file-earmark-person-fill"></i></div>
+                <h3>Resume Analyzer</h3>
+                <p class="project-sub">LLM-Powered Candidate Matching</p>
+                <p>GPT-based system to automate extraction and interpretation of skills from resumes. Uses prompt engineering, RAG, and semantic search to match candidates to job descriptions with intelligent, context-aware ranking.</p>
+                <div class="project-tags">
+                  <span>GPT</span><span>RAG</span><span>Semantic Search</span><span>NLP</span>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-6">
+              <article class="project-card">
+                <div class="project-icon"><i class="bi bi-receipt-cutoff"></i></div>
+                <h3>Invoice Processing System</h3>
+                <p class="project-sub">Azure OpenAI GPT-4 + RAG + OCR</p>
+                <p>LLM-based invoice processing leveraging Azure OpenAI GPT-4 with RAG and OCR to extract structured data from unstructured documents. Integrated with FastAPI and deployed on AWS for real-time, scalable processing.</p>
+                <div class="project-tags">
+                  <span>Azure OpenAI</span><span>OCR</span><span>FastAPI</span><span>AWS</span>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-6">
+              <article class="project-card">
+                <div class="project-icon"><i class="bi bi-chat-dots-fill"></i></div>
+                <h3>Document Q&amp;A System</h3>
+                <p class="project-sub">LangChain + Vector Database</p>
+                <p>Ingests and semantically indexes large document datasets using sentence-transformers and Pinecone. Users query documents and receive context-aware answers via LangChain and LLMs through a Streamlit interface on AWS with Docker CI/CD.</p>
+                <div class="project-tags">
+                  <span>LangChain</span><span>Pinecone</span><span>Streamlit</span><span>Docker</span>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Education & Certifications -->
+      <section id="education" class="section">
+        <div class="container-lg">
+          <div class="row g-5">
+            <div class="col-lg-6">
+              <span class="section-label">Education</span>
+              <h2 class="section-title mb-4">Academic Background</h2>
+
+              <div class="edu-card">
+                <div class="edu-icon"><i class="bi bi-mortarboard-fill"></i></div>
+                <div>
+                  <h3>MSc in Data Science &amp; Management</h3>
+                  <p class="edu-school">IIT Ropar &amp; IIM Amritsar</p>
+                  <span class="edu-date">2023 – 2025</span>
+                </div>
+              </div>
+
+              <div class="edu-card">
+                <div class="edu-icon"><i class="bi bi-award-fill"></i></div>
+                <div>
+                  <h3>GATE-22 — 90 Percentile</h3>
+                  <p class="edu-school">Competitive Exam</p>
+                  <span class="edu-date">2022</span>
+                </div>
+              </div>
+
+              <div class="edu-card">
+                <div class="edu-icon"><i class="bi bi-gear-fill"></i></div>
+                <div>
+                  <h3>Bachelor of Technology (B-Tech)</h3>
+                  <p class="edu-school">West Bengal University of Technology, Kolkata — Mechanical Engineering</p>
+                  <span class="edu-date">2012 – 2016</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <span class="section-label">Certifications</span>
+              <h2 class="section-title mb-4">Credentials</h2>
+
+              <div class="cert-list">
+                <div class="cert-item">
+                  <i class="bi bi-patch-check-fill"></i>
+                  <div>
+                    <strong>AI-102: Microsoft Certified – Azure AI Engineer Associate</strong>
+                    <span>Udemy · 2026</span>
+                  </div>
+                </div>
+                <div class="cert-item">
+                  <i class="bi bi-patch-check-fill"></i>
+                  <div>
+                    <strong>DP-100: Microsoft Certified – Azure Data Scientist Associate</strong>
+                    <span>Udemy · 2026</span>
+                  </div>
+                </div>
+                <div class="cert-item">
+                  <i class="bi bi-patch-check-fill"></i>
+                  <div>
+                    <strong>Developed LLM Powered Application with LangChain</strong>
+                    <span>Udemy · 2025</span>
+                  </div>
+                </div>
+                <div class="cert-item">
+                  <i class="bi bi-patch-check-fill"></i>
+                  <div>
+                    <strong>AWS Certifications</strong>
+                    <span>Udemy · 2025</span>
+                  </div>
+                </div>
+                <div class="cert-item">
+                  <i class="bi bi-patch-check-fill"></i>
+                  <div>
+                    <strong>FastAPI Full Stack Web Development</strong>
+                    <span>Udemy · 2025</span>
+                  </div>
+                </div>
+                <div class="cert-item">
+                  <i class="bi bi-patch-check-fill"></i>
+                  <div>
+                    <strong>Financial Modeling &amp; Valuation in Excel</strong>
+                    <span>Udemy · 2025</span>
+                  </div>
+                </div>
+                <div class="cert-item">
+                  <i class="bi bi-patch-check-fill"></i>
+                  <div>
+                    <strong>Business Analytics and Operation Research</strong>
+                    <span>IIM Mumbai · 2022</span>
+                  </div>
+                </div>
+                <div class="cert-item">
+                  <i class="bi bi-patch-check-fill"></i>
+                  <div>
+                    <strong>A2A Protocol: Interoperable AI Agents</strong>
+                    <span>Certification</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="section">
+        <div class="container-lg">
+          <div class="contact-card">
+            <div class="contact-glow"></div>
+            <div class="row align-items-center g-4">
+              <div class="col-lg-7">
+                <span class="section-label text-primary-light">Contact</span>
+                <h2 class="contact-title">Let's build something intelligent together.</h2>
+                <p class="contact-desc">Open to collaborations, consulting, and full-time opportunities in AI engineering and full-stack development.</p>
+              </div>
+              <div class="col-lg-5">
+                <div class="contact-actions">
+                  <a href="mailto:avijit4000@gmail.com" class="contact-btn">
+                    <i class="bi bi-envelope-fill"></i>
+                    avijit4000@gmail.com
+                  </a>
+                  <a href="tel:+917908023338" class="contact-btn">
+                    <i class="bi bi-whatsapp"></i>
+                    +91 7908023338
+                  </a>
+                  <a href="https://www.linkedin.com/in/avijit-biswas4000" target="_blank" rel="noopener" class="contact-btn">
+                    <i class="bi bi-linkedin"></i>
+                    LinkedIn Profile
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container-lg">
+        <div class="footer-inner">
+          <p>&copy; 2026 Avijit Biswas. All rights reserved.</p>
+          <div class="footer-links">
+            <a href="mailto:2023dss1008@iitrpr.ac.in">2023dss1008@iitrpr.ac.in</a>
+            <span>·</span>
+            <a href="https://www.avibiswas.in/" target="_blank" rel="noopener">avibiswas.in</a>
+          </div>
+        </div>
       </div>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="images/1.jpg" class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item">
-          <img src="images/2.1.jpg" class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item">
-          <img src="images/2.jpg" class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item">
-          <img src="images/3.jpg" class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item">
-          <img src="images/4.jpg" class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item">
-          <img src="images/5.jpg" class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item">
-          <img src="images/6.jpg" class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item">
-          <img src="images/7.jpg" class="d-block w-100" alt="...">
-        </div>
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
-
-    <div class="text-center mt-4">
-      <h1>Hello, I am Avijit Biswas</h1>
-      <p><small>This line of text is meant to be treated as fine print.</small></p>
-    </div>
-
-
-
-
-  <img src="images/wallpaperflare.com_wallpaper%20(1).jpg" class="img-fluid mb-5 mt-5" alt="Beautiful scenic background">
-
-
-
-<div class="container-fluid">
-    <div class="row row-cols-1 row-cols-md-3 g-4">
-  <div class="col">
-    <div class="card">
-      <img src="images/e.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card">
-      <img src="images/b.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card">
-      <img src="images/c.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card">
-      <img src="images/d.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      </div>
-    </div>
-  </div>
-      <div class="col">
-    <div class="card">
-      <img src="images/a.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
-
-
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    <script>
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth' });
+          }
+        });
+      });
+
+      const sections = document.querySelectorAll('section[id]');
+      const navLinks = document.querySelectorAll('.nav-link');
+
+      window.addEventListener('scroll', () => {
+        let current = '';
+        sections.forEach(section => {
+          if (window.scrollY >= section.offsetTop - 120) {
+            current = section.getAttribute('id');
+          }
+        });
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === '#' + current) {
+            link.classList.add('active');
+          }
+        });
+      });
+    </script>
   </body>
 </html>
