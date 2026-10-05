@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Support Avijit Biswas with a coffee.">
+    <meta name="description" content="Support Avijit Biswas with a coffee and send a message.">
     <title>Buy Me a Coffee | Avijit Biswas</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,18 +12,214 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
-      .coffee-page { min-height: 100vh; display: flex; flex-direction: column; background: radial-gradient(circle at 10% 0%, rgba(91,124,250,.14), transparent 32rem), radial-gradient(circle at 92% 80%, rgba(42,199,201,.14), transparent 28rem), #f7faff; }
-      .coffee-main { flex: 1; display: grid; place-items: center; padding: 4rem 1rem; }
-      .coffee-card { width: min(100%, 640px); padding: clamp(2rem, 6vw, 4rem); text-align: center; background: rgba(255,255,255,.88); border: 1px solid rgba(111,137,190,.16); border-radius: 28px; box-shadow: 0 22px 64px rgba(67,92,151,.12); }
-      .coffee-icon { width: 92px; height: 92px; display: grid; place-items: center; margin: 0 auto 1.6rem; border-radius: 24px; color: #fff; font-size: 2.7rem; background: linear-gradient(135deg, #5b7cfa, #2ac7c9); box-shadow: 0 15px 32px rgba(91,124,250,.27); }
-      .coffee-card h1 { color: #182b55; font-family: 'Space Grotesk', sans-serif; font-weight: 700; letter-spacing: -.04em; }
-      .coffee-card p { max-width: 470px; margin: 1rem auto 2rem; color: #6b7a92; }
-      .amounts { display: flex; justify-content: center; gap: .75rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
-      .amount { border: 1px solid rgba(91,124,250,.22); color: #4263e8; background: #fff; border-radius: 10px; padding: .65rem 1rem; font-weight: 700; cursor: pointer; }
-      .amount:hover, .amount.active { color: #fff; background: #5b7cfa; border-color: #5b7cfa; }
-      .pay-button { display: inline-flex; align-items: center; gap: .55rem; padding: .85rem 1.5rem; border: 0; border-radius: 10px; color: #fff; background: #4263e8; font-weight: 700; box-shadow: 0 10px 22px rgba(66,99,232,.25); cursor: pointer; }
-      .pay-button:hover { background: #3655d2; transform: translateY(-1px); }
-      .payment-note { min-height: 1.5rem; margin: 1.25rem 0 0; font-size: .9rem; color: #6b7a92; }
+      .coffee-page {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        background: radial-gradient(circle at 10% 0%, rgba(91,124,250,.14), transparent 32rem), radial-gradient(circle at 92% 80%, rgba(42,199,201,.14), transparent 28rem), #f7faff;
+      }
+      .coffee-main {
+        flex: 1;
+        display: grid;
+        place-items: center;
+        padding: 4rem 1rem;
+      }
+      .coffee-card {
+        width: min(100%, 760px);
+        padding: clamp(1.5rem, 4vw, 3rem);
+        background: rgba(255,255,255,.9);
+        border: 1px solid rgba(111,137,190,.16);
+        border-radius: 28px;
+        box-shadow: 0 22px 64px rgba(67,92,151,.12);
+      }
+      .coffee-icon {
+        width: 88px;
+        height: 88px;
+        display: grid;
+        place-items: center;
+        margin: 0 auto 1.2rem;
+        border-radius: 22px;
+        color: #fff;
+        font-size: 2.5rem;
+        background: linear-gradient(135deg, #5b7cfa, #2ac7c9);
+        box-shadow: 0 15px 32px rgba(91,124,250,.27);
+      }
+      .eyebrow {
+        display: inline-block;
+        margin-bottom: 0.5rem;
+        color: #4263e8;
+        font-size: .8rem;
+        font-weight: 700;
+        letter-spacing: .12em;
+        text-transform: uppercase;
+      }
+      .coffee-card h1 {
+        color: #182b55;
+        font-family: 'Space Grotesk', sans-serif;
+        font-weight: 700;
+        letter-spacing: -.04em;
+        margin-bottom: .5rem;
+      }
+      .coffee-card .intro {
+        max-width: 560px;
+        margin: 0 auto 2rem;
+        color: #6b7a92;
+      }
+      .amounts {
+        display: flex;
+        justify-content: center;
+        gap: .75rem;
+        flex-wrap: wrap;
+        margin-bottom: 1.5rem;
+      }
+      .amount {
+        border: 1px solid rgba(91,124,250,.22);
+        color: #4263e8;
+        background: #fff;
+        border-radius: 10px;
+        padding: .7rem 1rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition: all .2s ease;
+      }
+      .amount:hover, .amount.active {
+        color: #fff;
+        background: #5b7cfa;
+        border-color: #5b7cfa;
+      }
+      .field {
+        display: block;
+        margin-bottom: 1rem;
+        text-align: left;
+      }
+      .field span {
+        display: block;
+        margin-bottom: .55rem;
+        font-size: .9rem;
+        font-weight: 600;
+        color: #1f2d4d;
+      }
+      .amount-input-wrap {
+        display: flex;
+        align-items: center;
+        min-height: 54px;
+        border: 1px solid rgba(111,137,190,.22);
+        border-radius: 12px;
+        background: #f9fbff;
+        overflow: hidden;
+      }
+      .amount-input-wrap span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 52px;
+        height: 100%;
+        background: rgba(91,124,250,.06);
+        color: #4263e8;
+        font-size: 1.3rem;
+        font-weight: 700;
+        margin: 0;
+      }
+      .field input,
+      .field textarea {
+        width: 100%;
+        border: 1px solid rgba(111,137,190,.22);
+        border-radius: 12px;
+        background: #f9fbff;
+        padding: .9rem 1rem;
+        font-size: 1rem;
+        color: #1f2d4d;
+        outline: none;
+        transition: border-color .2s ease, box-shadow .2s ease;
+      }
+      .amount-input-wrap input {
+        border: none;
+        border-radius: 0;
+        background: transparent;
+        padding: .9rem 1rem;
+      }
+      .field input:focus,
+      .field textarea:focus,
+      .amount-input-wrap:focus-within {
+        border-color: rgba(91,124,250,.6);
+        box-shadow: 0 0 0 4px rgba(91,124,250,.08);
+      }
+      .two-col {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+      }
+      textarea {
+        min-height: 110px;
+        resize: vertical;
+      }
+      .checkbox-row {
+        display: flex;
+        align-items: flex-start;
+        gap: .7rem;
+        margin: 1rem 0 1.4rem;
+        color: #465977;
+        font-size: .92rem;
+      }
+      .checkbox-row input {
+        width: 18px;
+        height: 18px;
+        margin-top: .15rem;
+      }
+      .pay-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: .5rem;
+        width: 100%;
+        padding: .9rem 1.5rem;
+        border: 0;
+        border-radius: 12px;
+        color: #fff;
+        background: linear-gradient(135deg, #5b7cfa, #4263e8);
+        font-weight: 700;
+        box-shadow: 0 12px 24px rgba(66,99,232,.25);
+        cursor: pointer;
+        transition: transform .2s ease, box-shadow .2s ease;
+      }
+      .pay-button:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 18px 28px rgba(66,99,232,.28);
+      }
+      .payment-note {
+        min-height: 1.5rem;
+        margin: 1rem 0 0;
+        font-size: .92rem;
+        color: #6b7a92;
+      }
+      .payment-note.error {
+        color: #cc3d53;
+      }
+      .refund-box {
+        margin-top: 2.25rem;
+        padding: 1.25rem 1.3rem;
+        border: 1px solid rgba(111,137,190,.16);
+        border-radius: 16px;
+        background: #f5f8ff;
+        text-align: left;
+      }
+      .refund-box h3 {
+        margin: 0 0 .75rem;
+        font-size: 1.05rem;
+        color: #182b55;
+        font-weight: 700;
+      }
+      .refund-box ul {
+        margin: 0;
+        padding-left: 1.2rem;
+        color: #4c5f80;
+        line-height: 1.8;
+      }
+      @media (max-width: 640px) {
+        .two-col {
+          grid-template-columns: 1fr;
+        }
+      }
     </style>
   </head>
   <body class="coffee-page">
@@ -35,38 +231,163 @@
         </nav>
       </div>
     </header>
+
     <main class="coffee-main">
       <section class="coffee-card" aria-labelledby="coffee-title">
         <div class="coffee-icon" aria-hidden="true"><i class="bi bi-cup-hot-fill"></i></div>
-        <h1 id="coffee-title">Buy Me a Coffee</h1>
-        <p>If my work has helped you, a small coffee is a lovely way to support more ideas, experiments, and open-source projects.</p>
-        <div class="amounts" aria-label="Choose a contribution amount">
-          <button class="amount active" type="button" data-amount="₹99">₹99</button>
-          <button class="amount" type="button" data-amount="₹199">₹199</button>
-          <button class="amount" type="button" data-amount="₹499">₹499</button>
+        <span class="eyebrow">Service Payment</span>
+        <h1 id="coffee-title">Pay for Services</h1>
+        <p class="intro">Choose a service package or enter your custom amount. Share your details and payment information for AI automation, AI services, or web development work.</p>
+
+        <form id="coffeeForm" novalidate>
+          <div class="amounts" aria-label="Choose a service amount">
+            <button class="amount active" type="button" data-amount="1000">₹1000</button>
+            <button class="amount" type="button" data-amount="3000">₹3000</button>
+            <button class="amount" type="button" data-amount="5000">₹5000</button>
+            <button class="amount" type="button" data-amount="10000">₹10000</button>
+          </div>
+
+          <label class="field" for="customAmount">
+            <span>Amount you want to pay</span>
+            <div class="amount-input-wrap">
+              <span>₹</span>
+              <input id="customAmount" name="amount" type="number" min="1" step="1" value="1000" placeholder="2500" required>
+            </div>
+          </label>
+
+          <div class="two-col">
+            <label class="field" for="customerName">
+              <span>Full name</span>
+              <input id="customerName" name="name" type="text" placeholder="Your name" required>
+            </label>
+
+            <label class="field" for="customerEmail">
+              <span>Email address</span>
+              <input id="customerEmail" name="email" type="email" placeholder="your@email.com" required>
+            </label>
+          </div>
+
+          <label class="field" for="serviceId">
+            <span>Service ID (optional)</span>
+            <input id="serviceId" name="serviceId" type="text" placeholder="e.g. AI-001, WEB-101, AUTOMATION-7">
+          </label>
+
+          <label class="field" for="customerMessage">
+            <span>Message</span>
+            <textarea id="customerMessage" name="message" placeholder="Describe the service requirement, project details, or any notes..."></textarea>
+          </label>
+
+          <label class="checkbox-row" for="refundPolicy">
+            <input id="refundPolicy" type="checkbox" required>
+            <span>I agree to the refund policy and understand that payment support is voluntary.</span>
+          </label>
+
+          <button class="pay-button" type="submit"><i class="bi bi-lock-fill"></i>Pay ₹99</button>
+          <p class="payment-note" id="paymentNote" aria-live="polite"></p>
+        </form>
+
+        <div class="refund-box">
+          <h3>Refund Policy</h3>
+          <ul>
+            <li>Refunds are only considered for duplicate, incorrect, or accidental payments within 7 days of the transaction.</li>
+            <li>Payments made as a support contribution are generally non-refundable once the payment has been successfully processed.</li>
+            <li>Refund requests must include the transaction ID, payment date, and the reason for the refund request.</li>
+            <li>All refund decisions are reviewed case by case and will be returned to the original payment method within 5–10 business days.</li>
+            <li>For disputes or payment issues, contact support with your name, email, amount paid, and transaction reference.</li>
+          </ul>
         </div>
-        <button class="pay-button" id="payButton" type="button"><i class="bi bi-heart-fill"></i>Pay ₹99</button>
-        <p class="payment-note" id="paymentNote" aria-live="polite"></p>
       </section>
     </main>
+
     <footer class="footer">
-      <div class="container-lg"><div class="footer-inner"><p>&copy; 2026 Avijit Biswas. All rights reserved.</p><div class="footer-links"><a href="index.html#contact">Contact</a></div></div></div>
+      <div class="container-lg">
+        <div class="footer-inner">
+          <p>&copy; 2026 Avijit Biswas. All rights reserved.</p>
+          <div class="footer-links"><a href="index.html#contact">Contact</a></div>
+        </div>
+      </div>
     </footer>
+
     <script>
-      const amounts = document.querySelectorAll('.amount');
-      const payButton = document.getElementById('payButton');
+      const form = document.getElementById('coffeeForm');
+      const amountButtons = document.querySelectorAll('.amount');
+      const customAmountInput = document.getElementById('customAmount');
+      const payButton = document.querySelector('.pay-button');
       const paymentNote = document.getElementById('paymentNote');
-      let selectedAmount = '₹99';
-      amounts.forEach(button => button.addEventListener('click', () => {
-        amounts.forEach(item => item.classList.remove('active'));
-        button.classList.add('active');
-        selectedAmount = button.dataset.amount;
-        payButton.innerHTML = '<i class="bi bi-heart-fill"></i>Pay ' + selectedAmount;
+
+      function updatePaymentButton() {
+        const amount = Number(customAmountInput.value) || 0;
+        const payableAmount = amount > 0 ? amount : 0;
+        payButton.innerHTML = '<i class="bi bi-lock-fill"></i>Pay ₹' + payableAmount;
+      }
+
+      amountButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          amountButtons.forEach(item => item.classList.remove('active'));
+          button.classList.add('active');
+          const selectedAmount = Number(button.dataset.amount);
+          customAmountInput.value = selectedAmount;
+          updatePaymentButton();
+          paymentNote.textContent = '';
+          paymentNote.classList.remove('error');
+        });
+      });
+
+      customAmountInput.addEventListener('input', () => {
+        amountButtons.forEach(item => item.classList.remove('active'));
+        updatePaymentButton();
         paymentNote.textContent = '';
-      }));
-      payButton.addEventListener('click', () => {
-        paymentNote.textContent = 'Thank you! A payment provider link can be added here when it is ready.';
+        paymentNote.classList.remove('error');
+      });
+
+      form.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        const name = document.getElementById('customerName').value.trim();
+        const email = document.getElementById('customerEmail').value.trim();
+        const serviceId = document.getElementById('serviceId').value.trim();
+        const amount = Number(customAmountInput.value);
+        const message = document.getElementById('customerMessage').value.trim();
+        const refundChecked = document.getElementById('refundPolicy').checked;
+
+        if (!name || !email || !amount || amount <= 0 || !refundChecked) {
+          const reason = !name ? 'Please provide your full name.' : !email ? 'Please provide a valid email address.' : !amount || amount <= 0 ? 'Please enter a valid payment amount.' : 'Please accept the refund policy before proceeding.';
+          paymentNote.textContent = reason;
+          paymentNote.classList.add('error');
+
+          const params = new URLSearchParams({
+            status: 'failure',
+            reason: reason
+          });
+
+          window.location.href = 'payment-status.html?' + params.toString();
+          return;
+        }
+
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailPattern.test(email)) {
+          const reason = 'Please enter a valid email address.';
+          paymentNote.textContent = reason;
+          paymentNote.classList.add('error');
+          window.location.href = 'payment-status.html?status=failure&reason=' + encodeURIComponent(reason);
+          return;
+        }
+
+        const txnId = 'TXN-' + Date.now().toString().slice(-8);
+        const amountText = '₹' + amount;
+        const params = new URLSearchParams({
+          status: 'success',
+          txn: txnId,
+          amount: amountText,
+          name: name,
+          email: email,
+          serviceId: serviceId || 'Not provided',
+          message: message || 'No message provided'
+        });
+
+        window.location.href = 'payment-status.html?' + params.toString();
       });
     </script>
   </body>
 </html>
+
