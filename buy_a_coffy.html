@@ -282,7 +282,7 @@
             <span>I agree to the refund policy and understand that payment support is voluntary.</span>
           </label>
 
-          <button class="pay-button" type="submit"><i class="bi bi-lock-fill"></i>Pay ₹99</button>
+          <button class="pay-button" type="submit"><i class="bi bi-lock-fill"></i>Pay</button>
           <p class="payment-note" id="paymentNote" aria-live="polite"></p>
         </form>
 
@@ -316,9 +316,7 @@
       const paymentNote = document.getElementById('paymentNote');
 
       function updatePaymentButton() {
-        const amount = Number(customAmountInput.value) || 0;
-        const payableAmount = amount > 0 ? amount : 0;
-        payButton.innerHTML = '<i class="bi bi-lock-fill"></i>Pay ₹' + payableAmount;
+        payButton.innerHTML = '<i class="bi bi-lock-fill"></i>Pay';
       }
 
       amountButtons.forEach(button => {
