@@ -3,8 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Avijit Biswas — Senior AI Engineer specializing in LLM-powered systems, Agentic AI, and full-stack development.">
-    <title>Avijit Biswas | Senior AI Engineer</title>
+    <meta name="description" content="Avijit Biswas — Senior Full Stack AI/ML Engineer building scalable backend systems, LLM-powered applications, and Agentic AI on cloud-native platforms.">
+    <title>Avijit Biswas | Senior Full Stack AI/ML Engineer</title>
+    <script>
+      try {
+        if (localStorage.getItem('theme') === 'dark') {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      } catch (error) {}
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -13,23 +20,37 @@
     <link rel="stylesheet" href="style.css">
   </head>
 
-  <body>
+  <body class="glass-page">
+    <div class="page-bg" aria-hidden="true">
+      <span class="orb orb-1"></span>
+      <span class="orb orb-2"></span>
+      <span class="orb orb-3"></span>
+      <span class="grid-overlay"></span>
+    </div>
+    <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
     <header class="site-header sticky-top">
       <div class="container-lg">
-        <nav class="navbar navbar-expand-lg px-0">
+        <nav class="navbar navbar-expand-xl px-0">
           <a class="navbar-brand" href="#home">
             <span class="brand-mark">AB</span>
             <span class="brand-text">Avijit Biswas</span>
           </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
+          <div class="header-actions d-flex align-items-center gap-2 ms-auto ms-xl-2 order-xl-last">
+            <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark mode" aria-pressed="false" title="Switch to dark mode">
+              <i class="bi bi-moon-stars-fill" aria-hidden="true"></i>
+            </button>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
           <div class="collapse navbar-collapse" id="mainNav">
             <ul class="navbar-nav ms-auto align-items-lg-center">
               <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
               <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
               <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
               <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+              <li class="nav-item"><a class="nav-link" href="#international">International</a></li>
               <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
               <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
               <li class="nav-item ms-lg-3">
@@ -50,32 +71,36 @@
       <!-- Hero -->
       <section id="home" class="hero">
         <div class="hero-bg"></div>
-        <div class="container-lg position-relative">
+        <div class="container-lg position-relative hero-panel">
           <div class="row align-items-center g-5">
             <div class="col-lg-7">
               <div class="hero-badge">
                 <span class="pulse-dot"></span>
-                Available for opportunities
+                Principal Engineer · Nagarro
               </div>
               <h1 class="hero-title">Avijit Biswas</h1>
-              <p class="hero-subtitle">Senior AI Engineer</p>
+              <p class="hero-subtitle">Senior Full Stack AI/ML Engineer</p>
               <p class="hero-tagline">
-                MSc Data Science &amp; Management — IIT Ropar &amp; IIM Amritsar &nbsp;·&nbsp; B-Tech
+                MSc Data Science &amp; Management — Indian Institute Of Technology–Ropar (IIT–Ropar) &amp; Indian Institute Of Management–Amritsar (IIM–Amritsar) &nbsp;·&nbsp; B-Tech
               </p>
               <p class="hero-desc">
-                I transform complex problems into intelligent, scalable solutions — building production-grade AI agents, LLM-powered applications, and full-stack systems that deliver real-world impact.
+                Backend and AI/ML engineer with 6.5+ years of experience designing scalable APIs, microservices, and production-grade systems — with deep expertise in Generative AI, RAG, and Agentic AI on cloud-native platforms.
               </p>
               <div class="hero-actions">
                 <a href="#contact" class="btn btn-primary btn-lg">Get in Touch</a>
                 <a href="#projects" class="btn btn-outline-light btn-lg">View Projects</a>
               </div>
               <div class="hero-links">
-                <a href="mailto:avijit4000@gmail.com" title="Email"><i class="bi bi-envelope-fill"></i></a>
+                <a href="mailto:2023dss1008@iitrpr.ac.in" title="Email"><i class="bi bi-envelope-fill"></i></a>
                 <a href="https://www.linkedin.com/in/avijit-biswas4000" target="_blank" rel="noopener" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
                 <a href="https://github.com/avijit4000" target="_blank" rel="noopener" title="GitHub"><i class="bi bi-github"></i></a>
                 <a href="https://www.kaggle.com" target="_blank" rel="noopener" title="Kaggle"><i class="bi bi-bar-chart-fill"></i></a>
                 <a href="https://leetcode.com/u/avijit4000/" target="_blank" rel="noopener" title="LeetCode"><i class="bi bi-code-slash"></i></a>
                 <a href="https://www.avibiswas.in/" target="_blank" rel="noopener" title="Website"><i class="bi bi-globe2"></i></a>
+                <a href="https://www.instagram.com/avijit_biswas01/" target="_blank" rel="noopener" title="Instagram" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                <a href="https://www.facebook.com/avijitbiswas01/" target="_blank" rel="noopener" title="Facebook" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                <a href="https://www.youtube.com/@AvijitBiswasgood" target="_blank" rel="noopener" title="YouTube" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                <a href="https://x.com/avijit4000" target="_blank" rel="noopener" title="X (Twitter)" aria-label="X (Twitter)"><i class="bi bi-twitter-x"></i></a>
               </div>
             </div>
             <div class="col-lg-5">
@@ -87,8 +112,8 @@
                 <div class="hero-float-card card-1">
                   <i class="bi bi-robot"></i>
                   <div>
-                    <strong>5.5+ yrs</strong>
-                    <span>AI Engineering</span>
+                    <strong>6.5+ yrs</strong>
+                    <span>AI/ML Engineering</span>
                   </div>
                 </div>
                 <div class="hero-float-card card-2">
@@ -110,18 +135,17 @@
           <div class="row g-5 align-items-start">
             <div class="col-lg-5">
               <span class="section-label">About Me</span>
-              <h2 class="section-title">Building intelligent systems that scale.</h2>
               <p class="text-muted">
-                Full Stack AI Engineer with 5.5+ years of experience building and deploying production-grade AI applications, Agentic AI workflows, LLM-powered systems, and scalable web applications.
+                Backend and AI/ML engineer with 6.5+ years of experience in Python, FastAPI, PyTorch, Databricks, and cloud-based application development — designing scalable APIs, microservices, and production-grade backend systems.
               </p>
             </div>
             <div class="col-lg-7">
               <div class="about-card">
                 <p>
-                  Proven expertise in AI agent orchestration, RAG pipelines, React-based frontend development, API integrations, cloud-native architectures, and end-to-end application development — delivering scalable, high-performance solutions for complex business problems.
+                  Experienced in building high-performance, secure, and data-intensive applications with a focus on distributed architectures, API optimization, automation, and reliable data processing — from solution design through to production deployments.
                 </p>
                 <p class="mb-0">
-                  My focus is on building robust, user-centric applications that seamlessly move from development to deployment while delivering measurable real-world impact using Python, React, FastAPI, Azure OpenAI, Amazon Bedrock, Docker, and Kubernetes.
+                  Strong background in AI/ML, Generative AI, NLP, RAG, and Agentic AI, integrating intelligent capabilities into scalable backend platforms and enterprise solutions using Python, FastAPI, Azure OpenAI, LangChain, Docker, and Kubernetes.
                 </p>
               </div>
               <div class="row g-3 mt-2">
@@ -148,7 +172,7 @@
                     <i class="bi bi-envelope-fill"></i>
                     <div>
                       <span class="info-label">Email</span>
-                      <span class="info-value">avijit4000@gmail.com</span>
+                      <span class="info-value">2023dss1008@iitrpr.ac.in</span>
                     </div>
                   </div>
                 </div>
@@ -157,10 +181,76 @@
                     <i class="bi bi-translate"></i>
                     <div>
                       <span class="info-label">Languages</span>
-                      <span class="info-value">English, Hindi, Bengali, Mandarin</span>
+                      <span class="info-value">English, Hindi, Bengali, Mandarin Chinese</span>
                     </div>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- GitHub activity -->
+      <section id="github" class="section github-section">
+        <div class="container-lg">
+          <div class="row align-items-end g-4 mb-4">
+            <div class="col-lg-8">
+              <span class="section-label">Open Source</span>
+              <p class="section-desc mb-0">
+                GitHub contribution activity for <a href="https://github.com/avijit4000" target="_blank" rel="noopener">@avijit4000</a> — 225 contributions in 2025, 139 in the last year, and steady work since 2022.
+              </p>
+            </div>
+            <div class="col-lg-4 text-lg-end">
+              <a class="github-profile-btn" href="https://github.com/avijit4000" target="_blank" rel="noopener">
+                <i class="bi bi-github" aria-hidden="true"></i>View GitHub Profile
+              </a>
+            </div>
+          </div>
+
+          <div class="github-card" id="githubCarousel">
+            <div class="github-viewport" role="region" aria-label="GitHub contribution graphs by year">
+              <div class="github-track" id="githubTrack">
+                <figure class="github-slide">
+                  <img src="images/Work/github/github%20contribution.png" alt="GitHub contribution graph for the last 12 months showing 139 contributions" loading="lazy" decoding="async">
+                </figure>
+                <figure class="github-slide">
+                  <img src="images/Work/github/github%20contribution%202026.png" alt="GitHub contribution graph for 2026 showing 91 contributions" loading="lazy" decoding="async">
+                </figure>
+                <figure class="github-slide">
+                  <img src="images/Work/github/github%20contribution%202025.png" alt="GitHub contribution graph for 2025 showing 225 contributions" loading="lazy" decoding="async">
+                </figure>
+                <figure class="github-slide">
+                  <img src="images/Work/github/github%20contribution%202024.png" alt="GitHub contribution graph for 2024 showing 103 contributions" loading="lazy" decoding="async">
+                </figure>
+                <figure class="github-slide">
+                  <img src="images/Work/github/github%20contribution%202023.png" alt="GitHub contribution graph for 2023 showing 137 contributions" loading="lazy" decoding="async">
+                </figure>
+                <figure class="github-slide">
+                  <img src="images/Work/github/github%20contribution%202022.png" alt="GitHub contribution graph for 2022 showing 28 contributions" loading="lazy" decoding="async">
+                </figure>
+              </div>
+            </div>
+            <div class="github-bar">
+              <div class="github-years" role="group" aria-label="Select a contribution year">
+                <button class="github-year active" type="button" aria-pressed="true">Last year</button>
+                <button class="github-year" type="button" aria-pressed="false">2026</button>
+                <button class="github-year" type="button" aria-pressed="false">2025</button>
+                <button class="github-year" type="button" aria-pressed="false">2024</button>
+                <button class="github-year" type="button" aria-pressed="false">2023</button>
+                <button class="github-year" type="button" aria-pressed="false">2022</button>
+              </div>
+              <div class="github-controls">
+                <span class="github-position" id="githubPosition">1 / 6</span>
+                <button class="github-arrow" id="githubPrev" type="button" aria-label="Previous contribution year" title="Previous year">
+                  <i class="bi bi-chevron-up" aria-hidden="true"></i>
+                </button>
+                <button class="github-arrow" id="githubNext" type="button" aria-label="Next contribution year" title="Next year">
+                  <i class="bi bi-chevron-down" aria-hidden="true"></i>
+                </button>
+                <button class="github-arrow" id="githubPlay" type="button" aria-label="Pause automatic slideshow" title="Pause automatic slideshow">
+                  <i class="bi bi-pause-fill" aria-hidden="true"></i>
+                </button>
               </div>
             </div>
           </div>
@@ -180,13 +270,28 @@
               <div class="skill-group">
                 <div class="skill-group-header">
                   <i class="bi bi-cpu-fill"></i>
-                  <h3>AI &amp; ML</h3>
+                  <h3>AI &amp; Generative AI</h3>
                 </div>
                 <div class="skill-tags">
-                  <span>LLM</span><span>Agentic AI</span><span>RAG</span><span>LangChain</span>
-                  <span>LangGraph</span><span>LangSmith</span><span>OpenAI</span><span>Azure OpenAI</span>
-                  <span>Hugging Face</span><span>PyTorch</span><span>NLP</span><span>Deep Learning</span>
-                  <span>Computer Vision</span><span>Generative AI</span><span>Prompt Engineering</span>
+                  <span>Machine Learning</span><span>Deep Learning</span><span>NLP</span><span>Computer Vision</span>
+                  <span>PyTorch</span><span>Hugging Face</span><span>LLMs</span><span>Multimodal LLMs</span>
+                  <span>Generative AI</span><span>Agentic AI</span><span>RAG</span><span>CAG</span>
+                  <span>Prompt Engineering</span><span>Azure OpenAI</span><span>LangChain</span><span>LangGraph</span>
+                  <span>LangSmith</span><span>AutoGen</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="skill-group">
+                <div class="skill-group-header">
+                  <i class="bi bi-graph-up-arrow"></i>
+                  <h3>Data Science &amp; Optimization</h3>
+                </div>
+                <div class="skill-tags">
+                  <span>Mathematical Modeling</span><span>Operations Research</span><span>Optimization</span>
+                  <span>Linear Programming</span><span>Network Optimization</span><span>Predictive Analytics</span>
+                  <span>Prescriptive Analytics</span><span>Statistical Analysis</span><span>Time Series Forecasting</span>
+                  <span>Pandas</span><span>NumPy</span>
                 </div>
               </div>
             </div>
@@ -197,10 +302,22 @@
                   <h3>Languages &amp; Frameworks</h3>
                 </div>
                 <div class="skill-tags">
-                  <span>Python</span><span>JavaScript</span><span>React</span><span>FastAPI</span>
-                  <span>Node.js</span><span>Django</span><span>Flask</span><span>SQL</span>
-                  <span>PostgreSQL</span><span>MongoDB</span><span>GraphQL</span><span>gRPC</span>
-                  <span>REST APIs</span><span>asyncio</span><span>R</span>
+                  <span>Python</span><span>JavaScript</span><span>React</span><span>Node.js</span>
+                  <span>FastAPI</span><span>REST APIs</span><span>GraphQL</span><span>Django</span>
+                  <span>Flask</span><span>SQL</span><span>PostgreSQL</span><span>NoSQL</span>
+                  <span>MongoDB</span><span>HTML5</span><span>CSS3</span><span>Bootstrap</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="skill-group">
+                <div class="skill-group-header">
+                  <i class="bi bi-database-fill"></i>
+                  <h3>Vector DBs &amp; Data</h3>
+                </div>
+                <div class="skill-tags">
+                  <span>Pinecone</span><span>ChromaDB</span><span>FAISS</span><span>Snowflake</span>
+                  <span>Azure Data Lake</span><span>Databricks</span><span>Kafka</span><span>Redis</span>
                 </div>
               </div>
             </div>
@@ -211,34 +328,20 @@
                   <h3>Cloud &amp; DevOps</h3>
                 </div>
                 <div class="skill-tags">
-                  <span>AWS</span><span>Azure</span><span>GCP</span><span>Docker</span>
-                  <span>Kubernetes</span><span>CI/CD</span><span>Jenkins</span><span>Kafka</span>
-                  <span>Redis</span><span>Snowflake</span><span>Databricks</span><span>Git</span>
-                  <span>DevOps</span><span>LLMOps</span><span>JWT / RBAC</span>
+                  <span>AWS (EC2, S3, Elastic Beanstalk)</span><span>Azure</span><span>GCP</span><span>Docker</span>
+                  <span>Kubernetes</span><span>CI/CD</span><span>Git</span><span>DevOps</span>
+                  <span>JWT</span>
                 </div>
               </div>
             </div>
-            <div class="col-md-6">
-              <div class="skill-group">
-                <div class="skill-group-header">
-                  <i class="bi bi-database-fill"></i>
-                  <h3>Vector DBs &amp; Data</h3>
-                </div>
-                <div class="skill-tags">
-                  <span>Pinecone</span><span>Chroma DB</span><span>FAISS</span><span>Pandas</span>
-                  <span>NumPy</span><span>Azure Data Lake</span><span>Tableau</span>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6">
+            <div class="col-md-4">
               <div class="skill-group">
                 <div class="skill-group-header">
                   <i class="bi bi-tools"></i>
                   <h3>Developer Tools</h3>
                 </div>
                 <div class="skill-tags">
-                  <span>Postman</span><span>VS Code</span><span>HTML5</span><span>CSS3</span>
-                  <span>Bootstrap</span><span>Streamlit</span><span>AutoGen</span><span>LoRA</span>
+                  <span>Postman</span><span>VS Code</span><span>Tableau</span><span>Streamlit</span>
                 </div>
               </div>
             </div>
@@ -260,15 +363,13 @@
               <div class="timeline-card">
                 <div class="timeline-header">
                   <div>
-                    <h3>Sr. AI Engineer</h3>
-                    <p class="company">WIPRO (Optum, USA) · Hybrid USA / India</p>
+                    <h3>Principal Engineer</h3>
+                    <p class="company">Nagarro · Remote — Bangalore, India / USA</p>
                   </div>
-                  <span class="timeline-date">Jun 2025 – May 2026</span>
+                  <span class="timeline-date">May 2026 – Present</span>
                 </div>
                 <ul>
-                  <li>Designed, developed, and deployed production-grade AI agents, LLM-powered applications, and intelligent automation using Azure OpenAI, LangChain, AutoGen, RAG, fine-tuning, and LoRA.</li>
-                  <li>Built agentic AI systems with multi-step reasoning, tool calling, workflow orchestration, and autonomous decision-making for enterprise-scale workflows.</li>
-                  <li>Developed scalable end-to-end AI applications using Python, FastAPI, React, Azure, and Databricks with CI/CD (Jenkins), observability, and LLMOps best practices.</li>
+                  <li>Developing a multi-layer backend orchestration system using AI/LLMs, MCP, and IDP-based authentication to securely manage agents, tools, APIs, and enterprise workflows.</li>
                 </ul>
               </div>
             </article>
@@ -278,13 +379,31 @@
               <div class="timeline-card">
                 <div class="timeline-header">
                   <div>
-                    <h3>Data Scientist</h3>
-                    <p class="company">Hexaware Technologies · Remote, Pune</p>
+                    <h3>Sr. AI Engineer</h3>
+                    <p class="company">WIPRO (Optum, USA) · Hybrid — USA / India</p>
+                  </div>
+                  <span class="timeline-date">Jun 2025 – Present</span>
+                </div>
+                <ul>
+                  <li>Designed and developed scalable backend applications and APIs using Python, FastAPI, and cloud services, focusing on high-performance processing, reliable data flows, and production-ready architectures.</li>
+                  <li>Architected and optimized backend services integrating AI, APIs, data platforms, and cloud infrastructure, with emphasis on scalability, security, performance optimization, and system reliability.</li>
+                  <li>Collaborated with cross-functional engineering and business teams on solution design, technical implementations, and production deployments, delivering secure and scalable systems aligned with business requirements.</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-card">
+                <div class="timeline-header">
+                  <div>
+                    <h3>Software Engineer</h3>
+                    <p class="company">Hexaware Technologies · Remote — Pune, India</p>
                   </div>
                   <span class="timeline-date">Dec 2024 – Jun 2025</span>
                 </div>
                 <ul>
-                  <li>Developed a smart tutor application using FastAPI and Amazon Bedrock with continuous voice interaction, enabling AI-driven teaching that understands PDF content and delivers interactive learning experiences.</li>
+                  <li>Developed a smart tutor application using FastAPI and Amazon Bedrock with continuous voice interaction — AI-driven teaching that understands PDF content, explains and summarizes topics, answers subject-specific and contextual queries, and delivers an interactive, user-friendly learning experience through natural conversation.</li>
                 </ul>
               </div>
             </article>
@@ -295,29 +414,14 @@
                 <div class="timeline-header">
                   <div>
                     <h3>Researcher</h3>
-                    <p class="company">National Chung Cheng University · Taiwan</p>
+                    <p class="company">Research Centre on AI &amp; e-Commerce · National Chung Cheng University, Taiwan</p>
                   </div>
                   <span class="timeline-date">May – Jun 2024</span>
                 </div>
                 <ul>
-                  <li>AI-driven research on data interpretation, analyzing structured and unstructured data for market predictions.</li>
-                  <li>Integrated APIs to support research models, fine-tuned using HuggingFace; visualized LLM advancements with Tableau.</li>
-                </ul>
-              </div>
-            </article>
-
-            <article class="timeline-item">
-              <div class="timeline-marker"></div>
-              <div class="timeline-card">
-                <div class="timeline-header">
-                  <div>
-                    <h3>Research Project</h3>
-                    <p class="company">iHub – AWaDH @ IIT Ropar · India</p>
-                  </div>
-                  <span class="timeline-date">Sep 2023 – Mar 2024</span>
-                </div>
-                <ul>
-                  <li>Conducted research in artificial intelligence and sustainable development, contributing to data-driven innovation projects.</li>
+                  <li>Conducted AI-driven research on data interpretation, analyzing structured and unstructured data for market predictions.</li>
+                  <li>Integrated APIs to support research models and fine-tuned them using HuggingFace, improving model performance.</li>
+                  <li>Visualized findings and advancements in Large Language Models using Tableau to provide actionable insights for decision-making.</li>
                 </ul>
               </div>
             </article>
@@ -328,12 +432,12 @@
                 <div class="timeline-header">
                   <div>
                     <h3>Engineer</h3>
-                    <p class="company">CadMax (Autoliv) · Bangalore</p>
+                    <p class="company">CadMax (Autoliv) · Bangalore, India</p>
                   </div>
                   <span class="timeline-date">Mar – Jul 2023</span>
                 </div>
                 <ul>
-                  <li>Utilized MySQL, Tableau, Python, and R for statistical analysis, clustering, time series forecasting, and model fine-tuning.</li>
+                  <li>Utilized MySQL, Tableau, Python, and R to analyze complex datasets, applying statistical analysis, clustering, time series forecasting, and model fine-tuning to extract actionable insights.</li>
                   <li>Built predictive models using Transformers, Logistic Regression, XGBoost, and SVM.</li>
                 </ul>
               </div>
@@ -345,13 +449,13 @@
                 <div class="timeline-header">
                   <div>
                     <h3>Consultant – Development Engineer</h3>
-                    <p class="company">L&amp;T Technology Services (SCANIA) · Bangalore</p>
+                    <p class="company">L&amp;T Technology Services (SCANIA) · Bangalore, India</p>
                   </div>
                   <span class="timeline-date">Jan 2022 – Mar 2023</span>
                 </div>
                 <ul>
-                  <li>Developed and deployed ML models for the Customized Truck Development department with hypothesis testing and performance validation.</li>
-                  <li>Containerized applications for consistent environments and efficient deployment across development and production.</li>
+                  <li>Developed and deployed machine learning models within the Customized Truck Development department, applying analysis and hypothesis testing to validate model performance and improve accuracy.</li>
+                  <li>Containerized applications for the department, enabling consistent environments and efficient deployment across development and production.</li>
                 </ul>
               </div>
             </article>
@@ -362,28 +466,12 @@
                 <div class="timeline-header">
                   <div>
                     <h3>Graduate Consultant</h3>
-                    <p class="company">ISRO – ISTRAC · Bangalore</p>
+                    <p class="company">ISRO — ISTRAC · Bangalore, India</p>
                   </div>
                   <span class="timeline-date">Jan 2017 – Jan 2018</span>
                 </div>
                 <ul>
-                  <li>Applied Data Science techniques to validate algorithms and satellite data, improving data quality and visualization using Python, Pandas, NumPy, Matplotlib, Seaborn, and scikit-learn.</li>
-                </ul>
-              </div>
-            </article>
-
-            <article class="timeline-item">
-              <div class="timeline-marker"></div>
-              <div class="timeline-card">
-                <div class="timeline-header">
-                  <div>
-                    <h3>Internship Trainee</h3>
-                    <p class="company">Bharat Electronics Limited · Bangalore</p>
-                  </div>
-                  <span class="timeline-date">Jul – Aug 2015</span>
-                </div>
-                <ul>
-                  <li>Worked on Drive-in Antenna System during internship training program.</li>
+                  <li>Applied Data Science techniques to validate and evaluate algorithms and satellite data, improving data quality and visualization with Python, Pandas, NumPy, Matplotlib, Seaborn, and scikit-learn, leveraging OOP principles.</li>
                 </ul>
               </div>
             </article>
@@ -391,8 +479,299 @@
         </div>
       </section>
 
+      <!-- International Work -->
+      <section id="international" class="section section-alt">
+        <div class="container-lg">
+          <div class="row g-4 align-items-end mb-4">
+            <div class="col-lg-8">
+              <span class="section-label">International Work</span>
+              <h2 class="section-title">Working beyond borders.</h2>
+              <p class="text-muted mb-0">
+                Research and engineering collaborations outside India — a research residency at the Research Centre on AI &amp; e-Commerce, National Chung Cheng University in Taiwan, plus AI and backend delivery for US-based healthcare platforms. Here are moments from my time in Taiwan.
+              </p>
+            </div>
+            <div class="col-lg-4">
+              <div class="global-note">
+                <i class="bi bi-geo-alt-fill"></i>
+                <span>India-based · Open to international collaborations</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="row g-3 mb-4">
+            <div class="col-md-4">
+              <div class="global-tile">
+                <i class="bi bi-building-fill"></i>
+                <div>
+                  <strong>Taiwan</strong>
+                  <span>Research residency at National Chung Cheng University, 2024</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="global-tile">
+                <i class="bi bi-globe-americas"></i>
+                <div>
+                  <strong>United States</strong>
+                  <span>AI and backend delivery for Optum / Wipro healthcare platforms</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="global-tile">
+                <i class="bi bi-translate"></i>
+                <div>
+                  <strong>Four languages</strong>
+                  <span>English, Hindi, Bengali, and Mandarin Chinese</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="photo-gallery" data-gallery="visit">
+            <a class="photo-card is-featured" href="images/Taiwan%20Visit/1725878045599.jpeg" data-lightbox="images/Taiwan%20Visit/1725878045599.jpeg" data-caption="Taiwan&ndash;India Joint Research Center &middot; 2024" target="_blank" rel="noopener">
+              <img src="images/Taiwan%20Visit/1725878045599.jpeg" alt="Avijit Biswas with researchers at the Taiwan-India Joint Research Center, National Chung Cheng University" loading="lazy">
+              <span class="photo-caption">Taiwan&ndash;India Joint Research Center &middot; 2024</span>
+            </a>
+            <a class="photo-card" href="images/Taiwan%20Visit/1.jpg" data-lightbox="images/Taiwan%20Visit/1.jpg" data-caption="Taipei, Taiwan · 2024" target="_blank" rel="noopener">
+              <img src="images/Taiwan%20Visit/1.jpg" alt="Avijit Biswas at the Chiang Kai-shek Memorial Hall in Taipei, Taiwan" loading="lazy">
+              <span class="photo-caption">Taipei, Taiwan · 2024</span>
+            </a>
+            <a class="photo-card" href="images/Taiwan%20Visit/2.jpg" data-lightbox="images/Taiwan%20Visit/2.jpg" data-caption="Taiwan · 2024" target="_blank" rel="noopener">
+              <img src="images/Taiwan%20Visit/2.jpg" alt="Avijit Biswas during his research visit to Taiwan" loading="lazy">
+              <span class="photo-caption">Taiwan · 2024</span>
+            </a>
+            <a class="photo-card" href="images/Taiwan%20Visit/3.jpg" data-lightbox="images/Taiwan%20Visit/3.jpg" data-caption="Taiwan · 2024" target="_blank" rel="noopener">
+              <img src="images/Taiwan%20Visit/3.jpg" alt="Harbor in Taiwan during the research visit" loading="lazy">
+              <span class="photo-caption">Taiwan · 2024</span>
+            </a>
+            <a class="photo-card" href="images/Taiwan%20Visit/d.jpg" data-lightbox="images/Taiwan%20Visit/d.jpg" data-caption="Taiwan · 2024" target="_blank" rel="noopener">
+              <img src="images/Taiwan%20Visit/d.jpg" alt="Avijit Biswas with fellow researchers in Taiwan" loading="lazy">
+              <span class="photo-caption">Taiwan · 2024</span>
+            </a>
+            <a class="photo-card" href="images/Taiwan%20Visit/4.jpg" data-lightbox="images/Taiwan%20Visit/4.jpg" data-caption="Taiwan · 2024" target="_blank" rel="noopener">
+              <img src="images/Taiwan%20Visit/4.jpg" alt="Taiwan visit photo" loading="lazy">
+              <span class="photo-caption">Taiwan · 2024</span>
+            </a>
+            <a class="photo-card" href="images/Taiwan%20Visit/5.jpg" data-lightbox="images/Taiwan%20Visit/5.jpg" data-caption="Taiwan · 2024" target="_blank" rel="noopener">
+              <img src="images/Taiwan%20Visit/5.jpg" alt="Taiwan visit photo" loading="lazy">
+              <span class="photo-caption">Taiwan · 2024</span>
+            </a>
+            <a class="photo-card" href="images/Taiwan%20Visit/6.jpg" data-lightbox="images/Taiwan%20Visit/6.jpg" data-caption="Taiwan · 2024" target="_blank" rel="noopener">
+              <img src="images/Taiwan%20Visit/6.jpg" alt="Taiwan visit photo" loading="lazy">
+              <span class="photo-caption">Taiwan · 2024</span>
+            </a>
+            <a class="photo-card" href="images/Taiwan%20Visit/7.jpg" data-lightbox="images/Taiwan%20Visit/7.jpg" data-caption="Taiwan · 2024" target="_blank" rel="noopener">
+              <img src="images/Taiwan%20Visit/7.jpg" alt="Taiwan visit photo" loading="lazy">
+              <span class="photo-caption">Taiwan · 2024</span>
+            </a>
+            <a class="photo-card" href="images/Taiwan%20Visit/a.jpg" data-lightbox="images/Taiwan%20Visit/a.jpg" data-caption="Taiwan · 2024" target="_blank" rel="noopener">
+              <img src="images/Taiwan%20Visit/a.jpg" alt="Taiwan visit photo" loading="lazy">
+              <span class="photo-caption">Taiwan · 2024</span>
+            </a>
+            <a class="photo-card" href="images/Taiwan%20Visit/b.jpg" data-lightbox="images/Taiwan%20Visit/b.jpg" data-caption="Taiwan · 2024" target="_blank" rel="noopener">
+              <img src="images/Taiwan%20Visit/b.jpg" alt="Taiwan visit photo" loading="lazy">
+              <span class="photo-caption">Taiwan · 2024</span>
+            </a>
+            <a class="photo-card" href="images/Taiwan%20Visit/c.jpg" data-lightbox="images/Taiwan%20Visit/c.jpg" data-caption="Taiwan · 2024" target="_blank" rel="noopener">
+              <img src="images/Taiwan%20Visit/c.jpg" alt="Taiwan visit photo" loading="lazy">
+              <span class="photo-caption">Taiwan · 2024</span>
+            </a>
+            <a class="photo-card" href="images/Taiwan%20Visit/e.jpg" data-lightbox="images/Taiwan%20Visit/e.jpg" data-caption="Taiwan · 2024" target="_blank" rel="noopener">
+              <img src="images/Taiwan%20Visit/e.jpg" alt="Taiwan visit photo" loading="lazy">
+              <span class="photo-caption">Taiwan · 2024</span>
+            </a>
+            <a class="photo-card" href="images/Taiwan%20Visit/2.1.jpg" data-lightbox="images/Taiwan%20Visit/2.1.jpg" data-caption="Taipei, Taiwan · 2024" target="_blank" rel="noopener">
+              <img src="images/Taiwan%20Visit/2.1.jpg" alt="Selfie in front of the Chiang Kai-shek Memorial Hall in Taipei" loading="lazy">
+              <span class="photo-caption">Taipei, Taiwan · 2024</span>
+            </a>
+            <a class="photo-card" href="images/Taiwan%20Visit/IMG_20240502_101941.jpg" data-lightbox="images/Taiwan%20Visit/IMG_20240502_101941.jpg" data-caption="Taiwan &middot; 2024" target="_blank" rel="noopener">
+              <img src="images/Taiwan%20Visit/IMG_20240502_101941.jpg" alt="Avijit Biswas in Taiwan during his 2024 research visit" loading="lazy">
+              <span class="photo-caption">Taiwan &middot; 2024</span>
+            </a>
+            <a class="photo-card" href="images/Taiwan%20Visit/IMG_20240502_124504.jpg" data-lightbox="images/Taiwan%20Visit/IMG_20240502_124504.jpg" data-caption="Taiwan &middot; 2024" target="_blank" rel="noopener">
+              <img src="images/Taiwan%20Visit/IMG_20240502_124504.jpg" alt="Avijit Biswas in Taiwan during his 2024 research visit" loading="lazy">
+              <span class="photo-caption">Taiwan &middot; 2024</span>
+            </a>
+            <a class="photo-card" href="images/Taiwan%20Visit/IMG_20240503_124357.jpg" data-lightbox="images/Taiwan%20Visit/IMG_20240503_124357.jpg" data-caption="Taiwan &middot; 2024" target="_blank" rel="noopener">
+              <img src="images/Taiwan%20Visit/IMG_20240503_124357.jpg" alt="Avijit Biswas in Taiwan during his 2024 research visit" loading="lazy">
+              <span class="photo-caption">Taiwan &middot; 2024</span>
+            </a>
+            <a class="photo-card" href="images/Taiwan%20Visit/IMG_20240503_124401.jpg" data-lightbox="images/Taiwan%20Visit/IMG_20240503_124401.jpg" data-caption="Taiwan &middot; 2024" target="_blank" rel="noopener">
+              <img src="images/Taiwan%20Visit/IMG_20240503_124401.jpg" alt="Avijit Biswas in Taiwan during his 2024 research visit" loading="lazy">
+              <span class="photo-caption">Taiwan &middot; 2024</span>
+            </a>
+            <a class="photo-card" href="images/Taiwan%20Visit/IMG_20240504_181008.jpg" data-lightbox="images/Taiwan%20Visit/IMG_20240504_181008.jpg" data-caption="Taiwan &middot; 2024" target="_blank" rel="noopener">
+              <img src="images/Taiwan%20Visit/IMG_20240504_181008.jpg" alt="Avijit Biswas in Taiwan during his 2024 research visit" loading="lazy">
+              <span class="photo-caption">Taiwan &middot; 2024</span>
+            </a>
+            <a class="photo-card" href="images/Taiwan%20Visit/IMG_20240504_182310.jpg" data-lightbox="images/Taiwan%20Visit/IMG_20240504_182310.jpg" data-caption="Taiwan &middot; 2024" target="_blank" rel="noopener">
+              <img src="images/Taiwan%20Visit/IMG_20240504_182310.jpg" alt="Avijit Biswas in Taiwan during his 2024 research visit" loading="lazy">
+              <span class="photo-caption">Taiwan &middot; 2024</span>
+            </a>
+            <a class="photo-card" href="images/Taiwan%20Visit/IMG_20240504_182444.jpg" data-lightbox="images/Taiwan%20Visit/IMG_20240504_182444.jpg" data-caption="Taiwan &middot; 2024" target="_blank" rel="noopener">
+              <img src="images/Taiwan%20Visit/IMG_20240504_182444.jpg" alt="Avijit Biswas in Taiwan during his 2024 research visit" loading="lazy">
+              <span class="photo-caption">Taiwan &middot; 2024</span>
+            </a>
+            <a class="photo-card" href="images/Taiwan%20Visit/IMG_20240504_214525.jpg" data-lightbox="images/Taiwan%20Visit/IMG_20240504_214525.jpg" data-caption="Taiwan &middot; 2024" target="_blank" rel="noopener">
+              <img src="images/Taiwan%20Visit/IMG_20240504_214525.jpg" alt="Avijit Biswas in Taiwan during his 2024 research visit" loading="lazy">
+              <span class="photo-caption">Taiwan &middot; 2024</span>
+            </a>
+            <a class="photo-card" href="images/Taiwan%20Visit/IMG_20240505_165943.jpg" data-lightbox="images/Taiwan%20Visit/IMG_20240505_165943.jpg" data-caption="Taiwan &middot; 2024" target="_blank" rel="noopener">
+              <img src="images/Taiwan%20Visit/IMG_20240505_165943.jpg" alt="Avijit Biswas in Taiwan during his 2024 research visit" loading="lazy">
+              <span class="photo-caption">Taiwan &middot; 2024</span>
+            </a>
+            <a class="photo-card" href="images/Taiwan%20Visit/IMG_20240510_150726.jpg" data-lightbox="images/Taiwan%20Visit/IMG_20240510_150726.jpg" data-caption="Taiwan &middot; 2024" target="_blank" rel="noopener">
+              <img src="images/Taiwan%20Visit/IMG_20240510_150726.jpg" alt="Avijit Biswas in Taiwan during his 2024 research visit" loading="lazy">
+              <span class="photo-caption">Taiwan &middot; 2024</span>
+            </a>
+            <a class="photo-card" href="images/Taiwan%20Visit/IMG_20240511_134233.jpg" data-lightbox="images/Taiwan%20Visit/IMG_20240511_134233.jpg" data-caption="Taiwan &middot; 2024" target="_blank" rel="noopener">
+              <img src="images/Taiwan%20Visit/IMG_20240511_134233.jpg" alt="Avijit Biswas in Taiwan during his 2024 research visit" loading="lazy">
+              <span class="photo-caption">Taiwan &middot; 2024</span>
+            </a>
+            <a class="photo-card" href="images/Taiwan%20Visit/IMG_20240511_140512.jpg" data-lightbox="images/Taiwan%20Visit/IMG_20240511_140512.jpg" data-caption="Taiwan &middot; 2024" target="_blank" rel="noopener">
+              <img src="images/Taiwan%20Visit/IMG_20240511_140512.jpg" alt="Avijit Biswas in Taiwan during his 2024 research visit" loading="lazy">
+              <span class="photo-caption">Taiwan &middot; 2024</span>
+            </a>
+            <a class="photo-card" href="images/Taiwan%20Visit/IMG_20240511_145348.jpg" data-lightbox="images/Taiwan%20Visit/IMG_20240511_145348.jpg" data-caption="Taiwan &middot; 2024" target="_blank" rel="noopener">
+              <img src="images/Taiwan%20Visit/IMG_20240511_145348.jpg" alt="Avijit Biswas in Taiwan during his 2024 research visit" loading="lazy">
+              <span class="photo-caption">Taiwan &middot; 2024</span>
+            </a>
+            <a class="photo-card" href="images/Taiwan%20Visit/IMG_20240511_155024.jpg" data-lightbox="images/Taiwan%20Visit/IMG_20240511_155024.jpg" data-caption="Taiwan &middot; 2024" target="_blank" rel="noopener">
+              <img src="images/Taiwan%20Visit/IMG_20240511_155024.jpg" alt="Avijit Biswas in Taiwan during his 2024 research visit" loading="lazy">
+              <span class="photo-caption">Taiwan &middot; 2024</span>
+            </a>
+            <a class="photo-card" href="images/Taiwan%20Visit/IMG_20240511_155029.jpg" data-lightbox="images/Taiwan%20Visit/IMG_20240511_155029.jpg" data-caption="Taiwan &middot; 2024" target="_blank" rel="noopener">
+              <img src="images/Taiwan%20Visit/IMG_20240511_155029.jpg" alt="Avijit Biswas in Taiwan during his 2024 research visit" loading="lazy">
+              <span class="photo-caption">Taiwan &middot; 2024</span>
+            </a>
+            <a class="photo-card" href="images/Taiwan%20Visit/IMG_20240512_155125.jpg" data-lightbox="images/Taiwan%20Visit/IMG_20240512_155125.jpg" data-caption="Taiwan &middot; 2024" target="_blank" rel="noopener">
+              <img src="images/Taiwan%20Visit/IMG_20240512_155125.jpg" alt="Avijit Biswas in Taiwan during his 2024 research visit" loading="lazy">
+              <span class="photo-caption">Taiwan &middot; 2024</span>
+            </a>
+            <a class="photo-card" href="images/Taiwan%20Visit/IMG_20240525_125449.jpg" data-lightbox="images/Taiwan%20Visit/IMG_20240525_125449.jpg" data-caption="Taiwan &middot; 2024" target="_blank" rel="noopener">
+              <img src="images/Taiwan%20Visit/IMG_20240525_125449.jpg" alt="Avijit Biswas in Taiwan during his 2024 research visit" loading="lazy">
+              <span class="photo-caption">Taiwan &middot; 2024</span>
+            </a>
+            <a class="photo-card" href="images/Taiwan%20Visit/IMG_20240526_111318.jpg" data-lightbox="images/Taiwan%20Visit/IMG_20240526_111318.jpg" data-caption="Taiwan &middot; 2024" target="_blank" rel="noopener">
+              <img src="images/Taiwan%20Visit/IMG_20240526_111318.jpg" alt="Avijit Biswas in Taiwan during his 2024 research visit" loading="lazy">
+              <span class="photo-caption">Taiwan &middot; 2024</span>
+            </a>
+            <a class="photo-card" href="images/Taiwan%20Visit/IMG_20240526_122535.jpg" data-lightbox="images/Taiwan%20Visit/IMG_20240526_122535.jpg" data-caption="Taiwan &middot; 2024" target="_blank" rel="noopener">
+              <img src="images/Taiwan%20Visit/IMG_20240526_122535.jpg" alt="Avijit Biswas in Taiwan during his 2024 research visit" loading="lazy">
+              <span class="photo-caption">Taiwan &middot; 2024</span>
+            </a>
+            <a class="photo-card" href="images/Taiwan%20Visit/IMG_20240526_150414.jpg" data-lightbox="images/Taiwan%20Visit/IMG_20240526_150414.jpg" data-caption="Taiwan &middot; 2024" target="_blank" rel="noopener">
+              <img src="images/Taiwan%20Visit/IMG_20240526_150414.jpg" alt="Avijit Biswas in Taiwan during his 2024 research visit" loading="lazy">
+              <span class="photo-caption">Taiwan &middot; 2024</span>
+            </a>
+            <a class="photo-card" href="images/Taiwan%20Visit/IMG_20240610_122946.jpg" data-lightbox="images/Taiwan%20Visit/IMG_20240610_122946.jpg" data-caption="Taiwan &middot; 2024" target="_blank" rel="noopener">
+              <img src="images/Taiwan%20Visit/IMG_20240610_122946.jpg" alt="Avijit Biswas in Taiwan during his 2024 research visit" loading="lazy">
+              <span class="photo-caption">Taiwan &middot; 2024</span>
+            </a>
+            <a class="photo-card" href="images/Taiwan%20Visit/IMG_20240610_140526.jpg" data-lightbox="images/Taiwan%20Visit/IMG_20240610_140526.jpg" data-caption="Taiwan &middot; 2024" target="_blank" rel="noopener">
+              <img src="images/Taiwan%20Visit/IMG_20240610_140526.jpg" alt="Avijit Biswas in Taiwan during his 2024 research visit" loading="lazy">
+              <span class="photo-caption">Taiwan &middot; 2024</span>
+            </a>
+            <a class="photo-card" href="images/Taiwan%20Visit/IMG_20240610_181012.jpg" data-lightbox="images/Taiwan%20Visit/IMG_20240610_181012.jpg" data-caption="Taiwan &middot; 2024" target="_blank" rel="noopener">
+              <img src="images/Taiwan%20Visit/IMG_20240610_181012.jpg" alt="Avijit Biswas in Taiwan during his 2024 research visit" loading="lazy">
+              <span class="photo-caption">Taiwan &middot; 2024</span>
+            </a>
+            <a class="photo-card" href="images/Taiwan%20Visit/IMG_20240617_150422.jpg" data-lightbox="images/Taiwan%20Visit/IMG_20240617_150422.jpg" data-caption="Taiwan &middot; 2024" target="_blank" rel="noopener">
+              <img src="images/Taiwan%20Visit/IMG_20240617_150422.jpg" alt="Avijit Biswas in Taiwan during his 2024 research visit" loading="lazy">
+              <span class="photo-caption">Taiwan &middot; 2024</span>
+            </a>
+            <a class="photo-card" href="images/Taiwan%20Visit/IMG_20240627_114500.jpg" data-lightbox="images/Taiwan%20Visit/IMG_20240627_114500.jpg" data-caption="Taiwan &middot; 2024" target="_blank" rel="noopener">
+              <img src="images/Taiwan%20Visit/IMG_20240627_114500.jpg" alt="Avijit Biswas in Taiwan during his 2024 research visit" loading="lazy">
+              <span class="photo-caption">Taiwan &middot; 2024</span>
+            </a>
+            <a class="photo-card" href="images/Taiwan%20Visit/IMG_20240628_094454.jpg" data-lightbox="images/Taiwan%20Visit/IMG_20240628_094454.jpg" data-caption="Taiwan &middot; 2024" target="_blank" rel="noopener">
+              <img src="images/Taiwan%20Visit/IMG_20240628_094454.jpg" alt="Avijit Biswas in Taiwan during his 2024 research visit" loading="lazy">
+              <span class="photo-caption">Taiwan &middot; 2024</span>
+            </a>
+            <a class="photo-card" href="images/Taiwan%20Visit/IMG_20240628_094459.jpg" data-lightbox="images/Taiwan%20Visit/IMG_20240628_094459.jpg" data-caption="Taiwan &middot; 2024" target="_blank" rel="noopener">
+              <img src="images/Taiwan%20Visit/IMG_20240628_094459.jpg" alt="Avijit Biswas in Taiwan during his 2024 research visit" loading="lazy">
+              <span class="photo-caption">Taiwan &middot; 2024</span>
+            </a>
+            <a class="photo-card" href="images/Taiwan%20Visit/new.jpg" data-lightbox="images/Taiwan%20Visit/new.jpg" data-caption="Taiwan &middot; 2024" target="_blank" rel="noopener">
+              <img src="images/Taiwan%20Visit/new.jpg" alt="Portrait study of Avijit Biswas from his time in Taiwan" loading="lazy">
+              <span class="photo-caption">Taiwan &middot; 2024</span>
+            </a>
+          </div>
+
+          <div class="conference-block">
+            <div class="row g-3 align-items-end mb-3">
+              <div class="col-lg-8">
+                <span class="section-label">Taiwan Conference</span>
+                <h3 class="conference-title">Conference and forum days.</h3>
+                <p class="text-muted mb-0">
+                  Sessions and forums at National Chung Cheng University — including the Net-Zero Future sustainability forum and exchanges with the Taiwan–India Joint Research Center on Artificial Intelligence.
+                </p>
+              </div>
+              <div class="col-lg-4 text-lg-end">
+                <div class="conference-count"><i class="bi bi-images" aria-hidden="true"></i><span>13 photos · 2024</span></div>
+              </div>
+            </div>
+            <div class="photo-gallery" data-gallery="conference">
+              <a class="photo-card" href="images/Taiwan%20Visit/Taiwan%20Conference/IMG_20240528_124044.jpg" data-lightbox="images/Taiwan%20Visit/Taiwan%20Conference/IMG_20240528_124044.jpg" data-caption="Taiwan Conference &middot; 2024" target="_blank" rel="noopener">
+                <img src="images/Taiwan%20Visit/Taiwan%20Conference/IMG_20240528_124044.jpg" alt="Conference and forum moments at National Chung Cheng University, Taiwan" loading="lazy">
+                <span class="photo-caption">Taiwan Conference &middot; 2024</span>
+              </a>
+              <a class="photo-card" href="images/Taiwan%20Visit/Taiwan%20Conference/IMG_20240528_134156.jpg" data-lightbox="images/Taiwan%20Visit/Taiwan%20Conference/IMG_20240528_134156.jpg" data-caption="Taiwan Conference &middot; 2024" target="_blank" rel="noopener">
+                <img src="images/Taiwan%20Visit/Taiwan%20Conference/IMG_20240528_134156.jpg" alt="Conference and forum moments at National Chung Cheng University, Taiwan" loading="lazy">
+                <span class="photo-caption">Taiwan Conference &middot; 2024</span>
+              </a>
+              <a class="photo-card" href="images/Taiwan%20Visit/Taiwan%20Conference/IMG_20240528_152544.jpg" data-lightbox="images/Taiwan%20Visit/Taiwan%20Conference/IMG_20240528_152544.jpg" data-caption="Taiwan Conference &middot; 2024" target="_blank" rel="noopener">
+                <img src="images/Taiwan%20Visit/Taiwan%20Conference/IMG_20240528_152544.jpg" alt="Conference and forum moments at National Chung Cheng University, Taiwan" loading="lazy">
+                <span class="photo-caption">Taiwan Conference &middot; 2024</span>
+              </a>
+              <a class="photo-card" href="images/Taiwan%20Visit/Taiwan%20Conference/IMG_20240528_155652.jpg" data-lightbox="images/Taiwan%20Visit/Taiwan%20Conference/IMG_20240528_155652.jpg" data-caption="Taiwan Conference &middot; 2024" target="_blank" rel="noopener">
+                <img src="images/Taiwan%20Visit/Taiwan%20Conference/IMG_20240528_155652.jpg" alt="Conference and forum moments at National Chung Cheng University, Taiwan" loading="lazy">
+                <span class="photo-caption">Taiwan Conference &middot; 2024</span>
+              </a>
+              <a class="photo-card" href="images/Taiwan%20Visit/Taiwan%20Conference/IMG_20240624_103414.jpg" data-lightbox="images/Taiwan%20Visit/Taiwan%20Conference/IMG_20240624_103414.jpg" data-caption="Taiwan Conference &middot; 2024" target="_blank" rel="noopener">
+                <img src="images/Taiwan%20Visit/Taiwan%20Conference/IMG_20240624_103414.jpg" alt="Conference and forum moments at National Chung Cheng University, Taiwan" loading="lazy">
+                <span class="photo-caption">Taiwan Conference &middot; 2024</span>
+              </a>
+              <a class="photo-card" href="images/Taiwan%20Visit/Taiwan%20Conference/IMG_20240624_105148.jpg" data-lightbox="images/Taiwan%20Visit/Taiwan%20Conference/IMG_20240624_105148.jpg" data-caption="Taiwan Conference &middot; 2024" target="_blank" rel="noopener">
+                <img src="images/Taiwan%20Visit/Taiwan%20Conference/IMG_20240624_105148.jpg" alt="Conference and forum moments at National Chung Cheng University, Taiwan" loading="lazy">
+                <span class="photo-caption">Taiwan Conference &middot; 2024</span>
+              </a>
+              <a class="photo-card" href="images/Taiwan%20Visit/Taiwan%20Conference/IMG_20240624_105234.jpg" data-lightbox="images/Taiwan%20Visit/Taiwan%20Conference/IMG_20240624_105234.jpg" data-caption="Taiwan Conference &middot; 2024" target="_blank" rel="noopener">
+                <img src="images/Taiwan%20Visit/Taiwan%20Conference/IMG_20240624_105234.jpg" alt="Conference and forum moments at National Chung Cheng University, Taiwan" loading="lazy">
+                <span class="photo-caption">Taiwan Conference &middot; 2024</span>
+              </a>
+              <a class="photo-card" href="images/Taiwan%20Visit/Taiwan%20Conference/IMG_20240624_105415.jpg" data-lightbox="images/Taiwan%20Visit/Taiwan%20Conference/IMG_20240624_105415.jpg" data-caption="Taiwan Conference &middot; 2024" target="_blank" rel="noopener">
+                <img src="images/Taiwan%20Visit/Taiwan%20Conference/IMG_20240624_105415.jpg" alt="Conference and forum moments at National Chung Cheng University, Taiwan" loading="lazy">
+                <span class="photo-caption">Taiwan Conference &middot; 2024</span>
+              </a>
+              <a class="photo-card" href="images/Taiwan%20Visit/Taiwan%20Conference/IMG_20240624_105527.jpg" data-lightbox="images/Taiwan%20Visit/Taiwan%20Conference/IMG_20240624_105527.jpg" data-caption="Taiwan Conference &middot; 2024" target="_blank" rel="noopener">
+                <img src="images/Taiwan%20Visit/Taiwan%20Conference/IMG_20240624_105527.jpg" alt="Conference and forum moments at National Chung Cheng University, Taiwan" loading="lazy">
+                <span class="photo-caption">Taiwan Conference &middot; 2024</span>
+              </a>
+              <a class="photo-card" href="images/Taiwan%20Visit/Taiwan%20Conference/IMG_20240624_105800.jpg" data-lightbox="images/Taiwan%20Visit/Taiwan%20Conference/IMG_20240624_105800.jpg" data-caption="Taiwan Conference &middot; 2024" target="_blank" rel="noopener">
+                <img src="images/Taiwan%20Visit/Taiwan%20Conference/IMG_20240624_105800.jpg" alt="Conference and forum moments at National Chung Cheng University, Taiwan" loading="lazy">
+                <span class="photo-caption">Taiwan Conference &middot; 2024</span>
+              </a>
+              <a class="photo-card" href="images/Taiwan%20Visit/Taiwan%20Conference/IMG_20240624_105812.jpg" data-lightbox="images/Taiwan%20Visit/Taiwan%20Conference/IMG_20240624_105812.jpg" data-caption="Taiwan Conference &middot; 2024" target="_blank" rel="noopener">
+                <img src="images/Taiwan%20Visit/Taiwan%20Conference/IMG_20240624_105812.jpg" alt="Conference and forum moments at National Chung Cheng University, Taiwan" loading="lazy">
+                <span class="photo-caption">Taiwan Conference &middot; 2024</span>
+              </a>
+              <a class="photo-card" href="images/Taiwan%20Visit/Taiwan%20Conference/IMG_20240624_105908.jpg" data-lightbox="images/Taiwan%20Visit/Taiwan%20Conference/IMG_20240624_105908.jpg" data-caption="Taiwan Conference &middot; 2024" target="_blank" rel="noopener">
+                <img src="images/Taiwan%20Visit/Taiwan%20Conference/IMG_20240624_105908.jpg" alt="Conference and forum moments at National Chung Cheng University, Taiwan" loading="lazy">
+                <span class="photo-caption">Taiwan Conference &middot; 2024</span>
+              </a>
+              <a class="photo-card" href="images/Taiwan%20Visit/Taiwan%20Conference/IMG_20240624_122513.jpg" data-lightbox="images/Taiwan%20Visit/Taiwan%20Conference/IMG_20240624_122513.jpg" data-caption="Taiwan Conference &middot; 2024" target="_blank" rel="noopener">
+                <img src="images/Taiwan%20Visit/Taiwan%20Conference/IMG_20240624_122513.jpg" alt="Conference and forum moments at National Chung Cheng University, Taiwan" loading="lazy">
+                <span class="photo-caption">Taiwan Conference &middot; 2024</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- Projects -->
-      <section id="projects" class="section section-alt">
+      <section id="projects" class="section">
         <div class="container-lg">
           <div class="text-center mb-5">
             <span class="section-label">Portfolio</span>
@@ -450,23 +829,26 @@
       </section>
 
       <!-- Education & Certifications -->
-      <section id="education" class="section">
+      <section id="education" class="section section-alt">
         <div class="container-lg">
-          <div class="row g-5">
-            <div class="col-lg-6">
-              <span class="section-label">Education</span>
-              <h2 class="section-title mb-4">Academic Background</h2>
+          <div class="text-center mb-5">
+            <span class="section-label">Education</span>
+            <h2 class="section-title">Academic Background</h2>
+          </div>
 
-              <div class="edu-card">
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div class="edu-card h-100">
                 <div class="edu-icon"><i class="bi bi-mortarboard-fill"></i></div>
                 <div>
                   <h3>MSc in Data Science &amp; Management</h3>
-                  <p class="edu-school">IIT Ropar &amp; IIM Amritsar</p>
+                  <p class="edu-school">Indian Institute Of Technology–Ropar (IIT–Ropar) &amp; Indian Institute Of Management–Amritsar (IIM–Amritsar)</p>
                   <span class="edu-date">2023 – 2025</span>
                 </div>
               </div>
-
-              <div class="edu-card">
+            </div>
+            <div class="col-md-4">
+              <div class="edu-card h-100">
                 <div class="edu-icon"><i class="bi bi-award-fill"></i></div>
                 <div>
                   <h3>GATE-22 — 90 Percentile</h3>
@@ -474,8 +856,9 @@
                   <span class="edu-date">2022</span>
                 </div>
               </div>
-
-              <div class="edu-card">
+            </div>
+            <div class="col-md-4">
+              <div class="edu-card h-100">
                 <div class="edu-icon"><i class="bi bi-gear-fill"></i></div>
                 <div>
                   <h3>Bachelor of Technology (B-Tech)</h3>
@@ -484,68 +867,292 @@
                 </div>
               </div>
             </div>
+          </div>
 
-            <div class="col-lg-6">
-              <span class="section-label">Certifications</span>
-              <h2 class="section-title mb-4">Credentials</h2>
+          <!-- Certifications -->
+          <div class="certifications-block" id="certifications">
+            <div class="text-center mb-4">
+              <span class="section-label">Verified Learning</span>
+              <h2 class="section-title mb-2">Certifications</h2>
+              <p class="text-muted mx-auto section-desc">23 certificates across cloud, AI, and software engineering — click any card to view it full size.</p>
+            </div>
 
-              <div class="cert-list">
-                <div class="cert-item">
-                  <i class="bi bi-patch-check-fill"></i>
-                  <div>
-                    <strong>AI-102: Microsoft Certified – Azure AI Engineer Associate</strong>
-                    <span>Udemy · 2026</span>
-                  </div>
-                </div>
-                <div class="cert-item">
-                  <i class="bi bi-patch-check-fill"></i>
-                  <div>
-                    <strong>DP-100: Microsoft Certified – Azure Data Scientist Associate</strong>
-                    <span>Udemy · 2026</span>
-                  </div>
-                </div>
-                <div class="cert-item">
-                  <i class="bi bi-patch-check-fill"></i>
-                  <div>
-                    <strong>Developed LLM Powered Application with LangChain</strong>
-                    <span>Udemy · 2025</span>
-                  </div>
-                </div>
-                <div class="cert-item">
-                  <i class="bi bi-patch-check-fill"></i>
-                  <div>
-                    <strong>AWS Certifications</strong>
-                    <span>Udemy · 2025</span>
-                  </div>
-                </div>
-                <div class="cert-item">
-                  <i class="bi bi-patch-check-fill"></i>
-                  <div>
-                    <strong>FastAPI Full Stack Web Development</strong>
-                    <span>Udemy · 2025</span>
-                  </div>
-                </div>
-                <div class="cert-item">
-                  <i class="bi bi-patch-check-fill"></i>
-                  <div>
-                    <strong>Financial Modeling &amp; Valuation in Excel</strong>
-                    <span>Udemy · 2025</span>
-                  </div>
-                </div>
-                <div class="cert-item">
-                  <i class="bi bi-patch-check-fill"></i>
-                  <div>
-                    <strong>Business Analytics and Operation Research</strong>
-                    <span>IIM Mumbai · 2022</span>
-                  </div>
-                </div>
-                <div class="cert-item">
-                  <i class="bi bi-patch-check-fill"></i>
-                  <div>
-                    <strong>A2A Protocol: Interoperable AI Agents</strong>
-                    <span>Certification</span>
-                  </div>
-                </div>
+            <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-3" data-gallery="certs">
+              <div class="col">
+                <a class="cert-card" href="images/certifications/AI-102%20Microsoft%20Certified%20Azure%20Al%20Engineer%20Associate.jpg" data-lightbox="images/certifications/AI-102%20Microsoft%20Certified%20Azure%20Al%20Engineer%20Associate.jpg" data-caption="AI-102: Microsoft Certified Azure AI Engineer Associate" target="_blank" rel="noopener">
+                  <span class="cert-thumb">
+                    <img src="images/certifications/AI-102%20Microsoft%20Certified%20Azure%20Al%20Engineer%20Associate.jpg" alt="AI-102 Microsoft Certified Azure AI Engineer Associate certificate" loading="lazy">
+                    <span class="cert-zoom"><i class="bi bi-arrows-fullscreen"></i></span>
+                  </span>
+                  <span class="cert-info">
+                    <span class="cert-title">AI-102: Microsoft Certified Azure AI Engineer Associate</span>
+                    <span class="cert-meta">Udemy · 2026</span>
+                  </span>
+                </a>
+              </div>
+              <div class="col">
+                <a class="cert-card" href="images/certifications/DP-100%20Azure%20Data%20Scientist%20Associate%20Complete%20Exam%20Guide_001.jpg" data-lightbox="images/certifications/DP-100%20Azure%20Data%20Scientist%20Associate%20Complete%20Exam%20Guide_001.jpg" data-caption="DP-100: Azure Data Scientist Associate — Complete Exam Guide" target="_blank" rel="noopener">
+                  <span class="cert-thumb">
+                    <img src="images/certifications/DP-100%20Azure%20Data%20Scientist%20Associate%20Complete%20Exam%20Guide_001.jpg" alt="DP-100 Azure Data Scientist Associate certificate" loading="lazy">
+                    <span class="cert-zoom"><i class="bi bi-arrows-fullscreen"></i></span>
+                  </span>
+                  <span class="cert-info">
+                    <span class="cert-title">DP-100: Azure Data Scientist Associate — Complete Exam Guide</span>
+                    <span class="cert-meta">Udemy · 2026</span>
+                  </span>
+                </a>
+              </div>
+              <div class="col">
+                <a class="cert-card" href="images/certifications/A2A%20Protocol%20Interoperable%20AI%20Agents_001.jpg" data-lightbox="images/certifications/A2A%20Protocol%20Interoperable%20AI%20Agents_001.jpg" data-caption="Intro to Google's A2A Protocol: Interoperable AI Agents" target="_blank" rel="noopener">
+                  <span class="cert-thumb">
+                    <img src="images/certifications/A2A%20Protocol%20Interoperable%20AI%20Agents_001.jpg" alt="Intro to Google A2A Protocol certificate" loading="lazy">
+                    <span class="cert-zoom"><i class="bi bi-arrows-fullscreen"></i></span>
+                  </span>
+                  <span class="cert-info">
+                    <span class="cert-title">Intro to Google's A2A Protocol: Interoperable AI Agents</span>
+                    <span class="cert-meta">Udemy · 2025</span>
+                  </span>
+                </a>
+              </div>
+              <div class="col">
+                <a class="cert-card" href="images/certifications/Complete%20Model%20Context%20Protocol%20(%20MCP%20)Crash%20Course.jpg" data-lightbox="images/certifications/Complete%20Model%20Context%20Protocol%20(%20MCP%20)Crash%20Course.jpg" data-caption="MCP Crash Course: Complete Model Context Protocol in a Day" target="_blank" rel="noopener">
+                  <span class="cert-thumb">
+                    <img src="images/certifications/Complete%20Model%20Context%20Protocol%20(%20MCP%20)Crash%20Course.jpg" alt="MCP Crash Course certificate" loading="lazy">
+                    <span class="cert-zoom"><i class="bi bi-arrows-fullscreen"></i></span>
+                  </span>
+                  <span class="cert-info">
+                    <span class="cert-title">MCP Crash Course: Complete Model Context Protocol in a Day</span>
+                    <span class="cert-meta">Udemy · 2025</span>
+                  </span>
+                </a>
+              </div>
+              <div class="col">
+                <a class="cert-card" href="images/certifications/Developed%20LLM%20powered%20application%20with%20LangChain.jpg" data-lightbox="images/certifications/Developed%20LLM%20powered%20application%20with%20LangChain.jpg" data-caption="Developed LLM Powered Application with LangChain" target="_blank" rel="noopener">
+                  <span class="cert-thumb">
+                    <img src="images/certifications/Developed%20LLM%20powered%20application%20with%20LangChain.jpg" alt="LLM powered application with LangChain certificate" loading="lazy">
+                    <span class="cert-zoom"><i class="bi bi-arrows-fullscreen"></i></span>
+                  </span>
+                  <span class="cert-info">
+                    <span class="cert-title">Developed LLM Powered Application with LangChain</span>
+                    <span class="cert-meta">Udemy · 2025</span>
+                  </span>
+                </a>
+              </div>
+              <div class="col">
+                <a class="cert-card" href="images/certifications/AWS%20Certifications.jpg" data-lightbox="images/certifications/AWS%20Certifications.jpg" data-caption="Introduction to AWS — AWS Basics in 3 Hours" target="_blank" rel="noopener">
+                  <span class="cert-thumb">
+                    <img src="images/certifications/AWS%20Certifications.jpg" alt="Introduction to AWS certificate" loading="lazy">
+                    <span class="cert-zoom"><i class="bi bi-arrows-fullscreen"></i></span>
+                  </span>
+                  <span class="cert-info">
+                    <span class="cert-title">Introduction to AWS — AWS Basics in 3 Hours</span>
+                    <span class="cert-meta">Udemy · 2025</span>
+                  </span>
+                </a>
+              </div>
+              <div class="col">
+                <a class="cert-card" href="images/certifications/FastAPI%20Full%20Stack%20Web%20Devlopment.jpg" data-lightbox="images/certifications/FastAPI%20Full%20Stack%20Web%20Devlopment.jpg" data-caption="FastAPI Full Stack Web Development" target="_blank" rel="noopener">
+                  <span class="cert-thumb">
+                    <img src="images/certifications/FastAPI%20Full%20Stack%20Web%20Devlopment.jpg" alt="FastAPI Full Stack Web Development certificate" loading="lazy">
+                    <span class="cert-zoom"><i class="bi bi-arrows-fullscreen"></i></span>
+                  </span>
+                  <span class="cert-info">
+                    <span class="cert-title">FastAPI Full Stack Web Development</span>
+                    <span class="cert-meta">Udemy · 2025</span>
+                  </span>
+                </a>
+              </div>
+              <div class="col">
+                <a class="cert-card" href="images/certifications/System%20Design%20for%20Software%20Architecture.jpg" data-lightbox="images/certifications/System%20Design%20for%20Software%20Architecture.jpg" data-caption="System Design for Software Architecture" target="_blank" rel="noopener">
+                  <span class="cert-thumb">
+                    <img src="images/certifications/System%20Design%20for%20Software%20Architecture.jpg" alt="System Design for Software Architecture certificate" loading="lazy">
+                    <span class="cert-zoom"><i class="bi bi-arrows-fullscreen"></i></span>
+                  </span>
+                  <span class="cert-info">
+                    <span class="cert-title">System Design for Software Architecture</span>
+                    <span class="cert-meta">Udemy</span>
+                  </span>
+                </a>
+              </div>
+              <div class="col">
+                <a class="cert-card" href="images/certifications/React.jpg" data-lightbox="images/certifications/React.jpg" data-caption="React" target="_blank" rel="noopener">
+                  <span class="cert-thumb">
+                    <img src="images/certifications/React.jpg" alt="React certificate" loading="lazy">
+                    <span class="cert-zoom"><i class="bi bi-arrows-fullscreen"></i></span>
+                  </span>
+                  <span class="cert-info">
+                    <span class="cert-title">React</span>
+                    <span class="cert-meta">Udemy</span>
+                  </span>
+                </a>
+              </div>
+              <div class="col">
+                <a class="cert-card" href="images/certifications/The%20Complete%20Full-Stack%20%20Web%20Development%20%20Bootcamp_001.jpg" data-lightbox="images/certifications/The%20Complete%20Full-Stack%20%20Web%20Development%20%20Bootcamp_001.jpg" data-caption="The Complete Full-Stack Web Development Bootcamp" target="_blank" rel="noopener">
+                  <span class="cert-thumb">
+                    <img src="images/certifications/The%20Complete%20Full-Stack%20%20Web%20Development%20%20Bootcamp_001.jpg" alt="The Complete Full-Stack Web Development Bootcamp certificate" loading="lazy">
+                    <span class="cert-zoom"><i class="bi bi-arrows-fullscreen"></i></span>
+                  </span>
+                  <span class="cert-info">
+                    <span class="cert-title">The Complete Full-Stack Web Development Bootcamp</span>
+                    <span class="cert-meta">Udemy</span>
+                  </span>
+                </a>
+              </div>
+              <div class="col">
+                <a class="cert-card" href="images/certifications/Zero%20to%20Hero%20Salesforce%20Agentforce%203.0%20%202026_001.jpg" data-lightbox="images/certifications/Zero%20to%20Hero%20Salesforce%20Agentforce%203.0%20%202026_001.jpg" data-caption="Zero to Hero: Salesforce Agentforce 3.0 (2026)" target="_blank" rel="noopener">
+                  <span class="cert-thumb">
+                    <img src="images/certifications/Zero%20to%20Hero%20Salesforce%20Agentforce%203.0%20%202026_001.jpg" alt="Salesforce Agentforce 3.0 certificate" loading="lazy">
+                    <span class="cert-zoom"><i class="bi bi-arrows-fullscreen"></i></span>
+                  </span>
+                  <span class="cert-info">
+                    <span class="cert-title">Zero to Hero: Salesforce Agentforce 3.0 (2026)</span>
+                    <span class="cert-meta">Udemy · 2026</span>
+                  </span>
+                </a>
+              </div>
+              <div class="col">
+                <a class="cert-card" href="images/certifications/Financial%20Modeling%20%26%20Valuation%20in%20Excel%20-%20Complete%20Course_001.jpg" data-lightbox="images/certifications/Financial%20Modeling%20%26%20Valuation%20in%20Excel%20-%20Complete%20Course_001.jpg" data-caption="Financial Modeling &amp; Valuation in Excel" target="_blank" rel="noopener">
+                  <span class="cert-thumb">
+                    <img src="images/certifications/Financial%20Modeling%20%26%20Valuation%20in%20Excel%20-%20Complete%20Course_001.jpg" alt="Financial Modeling and Valuation in Excel certificate" loading="lazy">
+                    <span class="cert-zoom"><i class="bi bi-arrows-fullscreen"></i></span>
+                  </span>
+                  <span class="cert-info">
+                    <span class="cert-title">Financial Modeling &amp; Valuation in Excel</span>
+                    <span class="cert-meta">Udemy · 2025</span>
+                  </span>
+                </a>
+              </div>
+              <div class="col">
+                <a class="cert-card" href="images/certifications/Management%20Consulting%20Essential%20Training%202026.jpg" data-lightbox="images/certifications/Management%20Consulting%20Essential%20Training%202026.jpg" data-caption="Management Consulting Essential Training 2026" target="_blank" rel="noopener">
+                  <span class="cert-thumb">
+                    <img src="images/certifications/Management%20Consulting%20Essential%20Training%202026.jpg" alt="Management Consulting Essential Training certificate" loading="lazy">
+                    <span class="cert-zoom"><i class="bi bi-arrows-fullscreen"></i></span>
+                  </span>
+                  <span class="cert-info">
+                    <span class="cert-title">Management Consulting Essential Training</span>
+                    <span class="cert-meta">Udemy · 2026</span>
+                  </span>
+                </a>
+              </div>
+              <div class="col">
+                <a class="cert-card" href="images/certifications/Business%20and%20Operations%20Analytics%202022.jpg" data-lightbox="images/certifications/Business%20and%20Operations%20Analytics%202022.jpg" data-caption="Business and Operations Analytics — NITIE Mumbai (2022)" target="_blank" rel="noopener">
+                  <span class="cert-thumb">
+                    <img src="images/certifications/Business%20and%20Operations%20Analytics%202022.jpg" alt="NITIE Mumbai Business and Operations Analytics certificate" loading="lazy">
+                    <span class="cert-zoom"><i class="bi bi-arrows-fullscreen"></i></span>
+                  </span>
+                  <span class="cert-info">
+                    <span class="cert-title">Business and Operations Analytics</span>
+                    <span class="cert-meta">NITIE Mumbai · 2022</span>
+                  </span>
+                </a>
+              </div>
+              <div class="col">
+                <a class="cert-card" href="images/certifications/ihub%20awadh%20iit%20ropar.jpg" data-lightbox="images/certifications/ihub%20awadh%20iit%20ropar.jpg" data-caption="iHub AWaDH, IIT Ropar — Internship on Biodiversity (2024)" target="_blank" rel="noopener">
+                  <span class="cert-thumb">
+                    <img src="images/certifications/ihub%20awadh%20iit%20ropar.jpg" alt="iHub AWaDH IIT Ropar internship completion certificate" loading="lazy">
+                    <span class="cert-zoom"><i class="bi bi-arrows-fullscreen"></i></span>
+                  </span>
+                  <span class="cert-info">
+                    <span class="cert-title">iHub AWaDH, IIT Ropar — Biodiversity Internship</span>
+                    <span class="cert-meta">IIT Ropar · 2024</span>
+                  </span>
+                </a>
+              </div>
+              <div class="col">
+                <a class="cert-card" href="images/certifications/Computer%20Science%20Concepts%20Code.org_001.jpg" data-lightbox="images/certifications/Computer%20Science%20Concepts%20Code.org_001.jpg" data-caption="Computer Science Concepts — Course A (Code.org, 2023)" target="_blank" rel="noopener">
+                  <span class="cert-thumb">
+                    <img src="images/certifications/Computer%20Science%20Concepts%20Code.org_001.jpg" alt="Code.org Computer Science Concepts Course A certificate" loading="lazy">
+                    <span class="cert-zoom"><i class="bi bi-arrows-fullscreen"></i></span>
+                  </span>
+                  <span class="cert-info">
+                    <span class="cert-title">Computer Science Concepts — Course A</span>
+                    <span class="cert-meta">Code.org · 2023</span>
+                  </span>
+                </a>
+              </div>
+              <div class="col">
+                <a class="cert-card" href="images/certifications/Computer%20Science%20Concepts%20Code.org_002.jpg" data-lightbox="images/certifications/Computer%20Science%20Concepts%20Code.org_002.jpg" data-caption="Computer Science Concepts — Course B (Code.org, 2023)" target="_blank" rel="noopener">
+                  <span class="cert-thumb">
+                    <img src="images/certifications/Computer%20Science%20Concepts%20Code.org_002.jpg" alt="Code.org Computer Science Concepts Course B certificate" loading="lazy">
+                    <span class="cert-zoom"><i class="bi bi-arrows-fullscreen"></i></span>
+                  </span>
+                  <span class="cert-info">
+                    <span class="cert-title">Computer Science Concepts — Course B</span>
+                    <span class="cert-meta">Code.org · 2023</span>
+                  </span>
+                </a>
+              </div>
+              <div class="col">
+                <a class="cert-card" href="images/certifications/Computer%20Science%20Concepts%20Code.org_003.jpg" data-lightbox="images/certifications/Computer%20Science%20Concepts%20Code.org_003.jpg" data-caption="Computer Science Concepts — Course C (Code.org, 2023)" target="_blank" rel="noopener">
+                  <span class="cert-thumb">
+                    <img src="images/certifications/Computer%20Science%20Concepts%20Code.org_003.jpg" alt="Code.org Computer Science Concepts Course C certificate" loading="lazy">
+                    <span class="cert-zoom"><i class="bi bi-arrows-fullscreen"></i></span>
+                  </span>
+                  <span class="cert-info">
+                    <span class="cert-title">Computer Science Concepts — Course C</span>
+                    <span class="cert-meta">Code.org · 2023</span>
+                  </span>
+                </a>
+              </div>
+              <div class="col">
+                <a class="cert-card" href="images/certifications/Computer%20Science%20Concepts%20Code.org_004.jpg" data-lightbox="images/certifications/Computer%20Science%20Concepts%20Code.org_004.jpg" data-caption="Computer Science Concepts — Course D (Code.org, 2023)" target="_blank" rel="noopener">
+                  <span class="cert-thumb">
+                    <img src="images/certifications/Computer%20Science%20Concepts%20Code.org_004.jpg" alt="Code.org Computer Science Concepts Course D certificate" loading="lazy">
+                    <span class="cert-zoom"><i class="bi bi-arrows-fullscreen"></i></span>
+                  </span>
+                  <span class="cert-info">
+                    <span class="cert-title">Computer Science Concepts — Course D</span>
+                    <span class="cert-meta">Code.org · 2023</span>
+                  </span>
+                </a>
+              </div>
+              <div class="col">
+                <a class="cert-card" href="images/certifications/Hexaware%20Information%20Security%20Curriculum_73711_28681_001.jpg" data-lightbox="images/certifications/Hexaware%20Information%20Security%20Curriculum_73711_28681_001.jpg" data-caption="Information Security Curriculum — Hexaware" target="_blank" rel="noopener">
+                  <span class="cert-thumb">
+                    <img src="images/certifications/Hexaware%20Information%20Security%20Curriculum_73711_28681_001.jpg" alt="Hexaware Information Security Curriculum certificate" loading="lazy">
+                    <span class="cert-zoom"><i class="bi bi-arrows-fullscreen"></i></span>
+                  </span>
+                  <span class="cert-info">
+                    <span class="cert-title">Information Security Curriculum</span>
+                    <span class="cert-meta">Hexaware</span>
+                  </span>
+                </a>
+              </div>
+              <div class="col">
+                <a class="cert-card" href="images/certifications/Hexaware%20The%20Art%20of%20Phishing%20Defense%202025%20Curriculum_73711_28640_001.jpg" data-lightbox="images/certifications/Hexaware%20The%20Art%20of%20Phishing%20Defense%202025%20Curriculum_73711_28640_001.jpg" data-caption="The Art of Phishing Defense 2025 — Hexaware" target="_blank" rel="noopener">
+                  <span class="cert-thumb">
+                    <img src="images/certifications/Hexaware%20The%20Art%20of%20Phishing%20Defense%202025%20Curriculum_73711_28640_001.jpg" alt="Hexaware The Art of Phishing Defense 2025 certificate" loading="lazy">
+                    <span class="cert-zoom"><i class="bi bi-arrows-fullscreen"></i></span>
+                  </span>
+                  <span class="cert-info">
+                    <span class="cert-title">The Art of Phishing Defense 2025</span>
+                    <span class="cert-meta">Hexaware · 2025</span>
+                  </span>
+                </a>
+              </div>
+              <div class="col">
+                <a class="cert-card" href="images/certifications/Wipro%20Code%20of%20Business%20Conduct_001.jpg" data-lightbox="images/certifications/Wipro%20Code%20of%20Business%20Conduct_001.jpg" data-caption="Code of Business Conduct — Wipro" target="_blank" rel="noopener">
+                  <span class="cert-thumb">
+                    <img src="images/certifications/Wipro%20Code%20of%20Business%20Conduct_001.jpg" alt="Wipro Code of Business Conduct certificate" loading="lazy">
+                    <span class="cert-zoom"><i class="bi bi-arrows-fullscreen"></i></span>
+                  </span>
+                  <span class="cert-info">
+                    <span class="cert-title">Code of Business Conduct</span>
+                    <span class="cert-meta">Wipro · 2026</span>
+                  </span>
+                </a>
+              </div>
+              <div class="col">
+                <a class="cert-card" href="images/certifications/American%20English%20Pronunciation.jpg" data-lightbox="images/certifications/American%20English%20Pronunciation.jpg" data-caption="American English Pronunciation" target="_blank" rel="noopener">
+                  <span class="cert-thumb">
+                    <img src="images/certifications/American%20English%20Pronunciation.jpg" alt="American English Pronunciation certificate" loading="lazy">
+                    <span class="cert-zoom"><i class="bi bi-arrows-fullscreen"></i></span>
+                  </span>
+                  <span class="cert-info">
+                    <span class="cert-title">American English Pronunciation</span>
+                    <span class="cert-meta">Udemy</span>
+                  </span>
+                </a>
               </div>
             </div>
           </div>
@@ -561,13 +1168,13 @@
               <div class="col-lg-7">
                 <span class="section-label text-primary-light">Contact</span>
                 <h2 class="contact-title">Let's build something intelligent together.</h2>
-                <p class="contact-desc">Open to collaborations, consulting, and full-time opportunities in AI engineering and full-stack development.</p>
+                <p class="contact-desc">Open to collaborations, consulting, and full-time opportunities in backend engineering, AI/ML, and agentic systems.</p>
               </div>
               <div class="col-lg-5">
                 <div class="contact-actions">
-                  <a href="mailto:avijit4000@gmail.com" class="contact-btn">
+                  <a href="mailto:2023dss1008@iitrpr.ac.in" class="contact-btn">
                     <i class="bi bi-envelope-fill"></i>
-                    avijit4000@gmail.com
+                    2023dss1008@iitrpr.ac.in
                   </a>
                   <a href="tel:+917908023338" class="contact-btn">
                     <i class="bi bi-whatsapp"></i>
@@ -577,6 +1184,12 @@
                     <i class="bi bi-linkedin"></i>
                     LinkedIn Profile
                   </a>
+                </div>
+                <div class="contact-socials" aria-label="Social profiles">
+                  <a href="https://www.instagram.com/avijit_biswas01/" target="_blank" rel="noopener" title="Instagram" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                  <a href="https://www.facebook.com/avijitbiswas01/" target="_blank" rel="noopener" title="Facebook" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                  <a href="https://www.youtube.com/@AvijitBiswasgood" target="_blank" rel="noopener" title="YouTube" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                  <a href="https://x.com/avijit4000" target="_blank" rel="noopener" title="X (Twitter)" aria-label="X (Twitter)"><i class="bi bi-twitter-x"></i></a>
                 </div>
               </div>
             </div>
@@ -597,6 +1210,30 @@
         </div>
       </div>
     </footer>
+
+    <!-- Media lightbox -->
+    <div class="modal fade media-modal" id="mediaModal" tabindex="-1" aria-labelledby="mediaModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-xl modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="media-heading">
+              <h2 class="modal-title" id="mediaModalLabel">Certificate</h2>
+              <span class="media-counter" id="mediaCounter"></span>
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <button type="button" class="media-nav media-nav-prev" id="mediaPrev" aria-label="Previous item">
+              <i class="bi bi-chevron-left" aria-hidden="true"></i>
+            </button>
+            <img id="mediaModalImage" src="" alt="">
+            <button type="button" class="media-nav media-nav-next" id="mediaNext" aria-label="Next item">
+              <i class="bi bi-chevron-right" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
     <script>
@@ -632,6 +1269,241 @@
 
       window.addEventListener('scroll', updateNavigation);
       updateNavigation();
+
+      /* Scroll progress bar */
+      const progressBar = document.getElementById('scrollProgress');
+      const updateProgress = () => {
+        const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+        progressBar.style.width = scrollable > 0 ? (window.scrollY / scrollable) * 100 + '%' : '0%';
+      };
+      window.addEventListener('scroll', updateProgress, { passive: true });
+      window.addEventListener('resize', updateProgress);
+      updateProgress();
+
+      /* Media lightbox for certificates and photos */
+      const mediaModalElement = document.getElementById('mediaModal');
+      if (mediaModalElement) {
+        const mediaModal = new bootstrap.Modal(mediaModalElement);
+        const mediaImage = document.getElementById('mediaModalImage');
+        const mediaTitle = document.getElementById('mediaModalLabel');
+        const mediaCounter = document.getElementById('mediaCounter');
+        const mediaPrev = document.getElementById('mediaPrev');
+        const mediaNext = document.getElementById('mediaNext');
+        let mediaItems = [];
+        let mediaIndex = 0;
+
+        const renderMedia = () => {
+          const item = mediaItems[mediaIndex];
+          if (!item) return;
+          const source = item.getAttribute('data-lightbox');
+          const caption = item.getAttribute('data-caption') || 'Preview';
+          mediaImage.src = source;
+          mediaImage.alt = caption;
+          mediaTitle.textContent = caption;
+          mediaCounter.textContent = mediaItems.length > 1 ? (mediaIndex + 1) + ' / ' + mediaItems.length : '';
+          const single = mediaItems.length < 2;
+          mediaPrev.disabled = single;
+          mediaNext.disabled = single;
+        };
+
+        const stepMedia = offset => {
+          if (mediaItems.length < 2) return;
+          mediaIndex = (mediaIndex + offset + mediaItems.length) % mediaItems.length;
+          renderMedia();
+        };
+
+        document.querySelectorAll('[data-lightbox]').forEach(trigger => {
+          trigger.addEventListener('click', event => {
+            event.preventDefault();
+            const group = trigger.closest('[data-gallery]');
+            mediaItems = group ? Array.from(group.querySelectorAll('[data-lightbox]')) : [trigger];
+            mediaIndex = Math.max(0, mediaItems.indexOf(trigger));
+            renderMedia();
+            mediaModal.show();
+          });
+        });
+
+        mediaPrev.addEventListener('click', () => stepMedia(-1));
+        mediaNext.addEventListener('click', () => stepMedia(1));
+
+        document.addEventListener('keydown', event => {
+          if (!mediaModalElement.classList.contains('show')) return;
+          if (event.key === 'ArrowLeft') {
+            event.preventDefault();
+            stepMedia(-1);
+          } else if (event.key === 'ArrowRight') {
+            event.preventDefault();
+            stepMedia(1);
+          }
+        });
+      }
+
+      /* Light/dark theme toggle (light by default) */
+      const themeToggle = document.getElementById('themeToggle');
+      if (themeToggle) {
+        const themeIcon = themeToggle.querySelector('i');
+        const syncThemeToggle = () => {
+          const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+          const label = isDark ? 'Switch to light mode' : 'Switch to dark mode';
+          themeToggle.setAttribute('aria-pressed', String(isDark));
+          themeToggle.setAttribute('aria-label', label);
+          themeToggle.setAttribute('title', label);
+          themeIcon.className = isDark ? 'bi bi-sun-fill' : 'bi bi-moon-stars-fill';
+        };
+        syncThemeToggle();
+        themeToggle.addEventListener('click', () => {
+          const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+          if (isDark) {
+            document.documentElement.removeAttribute('data-theme');
+          } else {
+            document.documentElement.setAttribute('data-theme', 'dark');
+          }
+          try {
+            localStorage.setItem('theme', isDark ? 'light' : 'dark');
+          } catch (error) {}
+          syncThemeToggle();
+        });
+      }
+
+      /* GitHub contribution carousel */
+      const githubTrack = document.getElementById('githubTrack');
+      if (githubTrack) {
+        const githubSlides = Array.from(githubTrack.children);
+        const githubYearButtons = Array.from(document.querySelectorAll('.github-year'));
+        const githubCarousel = document.getElementById('githubCarousel');
+        const githubPrev = document.getElementById('githubPrev');
+        const githubNext = document.getElementById('githubNext');
+        const githubPlay = document.getElementById('githubPlay');
+        const githubIcon = githubPlay.querySelector('i');
+        const githubPosition = document.getElementById('githubPosition');
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        let githubIndex = 0;
+        let githubTimer = null;
+        let githubInView = false;
+        let githubStarted = false;
+        let githubAuto = !reduceMotion;
+
+        const renderGithub = index => {
+          githubIndex = (index + githubSlides.length) % githubSlides.length;
+          githubTrack.style.transform = 'translateY(-' + githubIndex * 100 + '%)';
+          githubYearButtons.forEach((button, i) => {
+            const active = i === githubIndex;
+            button.classList.toggle('active', active);
+            button.setAttribute('aria-pressed', String(active));
+          });
+          githubPosition.textContent = (githubIndex + 1) + ' / ' + githubSlides.length;
+        };
+
+        const stopGithub = () => {
+          window.clearInterval(githubTimer);
+          githubTimer = null;
+        };
+
+        const startGithub = () => {
+          if (!githubAuto || !githubInView) return;
+          stopGithub();
+          githubTimer = window.setInterval(() => renderGithub(githubIndex + 1), 5200);
+        };
+
+        const syncGithubPlay = () => {
+          githubIcon.className = githubAuto ? 'bi bi-pause-fill' : 'bi bi-play-fill';
+          const label = githubAuto ? 'Pause automatic slideshow' : 'Play automatic slideshow';
+          githubPlay.setAttribute('aria-label', label);
+          githubPlay.setAttribute('title', label);
+        };
+
+        githubYearButtons.forEach((button, i) => {
+          button.addEventListener('click', () => renderGithub(i));
+        });
+
+        githubPrev.addEventListener('click', () => renderGithub(githubIndex - 1));
+        githubNext.addEventListener('click', () => renderGithub(githubIndex + 1));
+
+        githubPlay.addEventListener('click', () => {
+          githubAuto = !githubAuto;
+          syncGithubPlay();
+          if (githubAuto) {
+            startGithub();
+          } else {
+            stopGithub();
+          }
+        });
+
+        githubCarousel.addEventListener('mouseenter', stopGithub);
+        githubCarousel.addEventListener('mouseleave', startGithub);
+        githubCarousel.addEventListener('focusin', stopGithub);
+        githubCarousel.addEventListener('focusout', event => {
+          if (!githubCarousel.contains(event.relatedTarget)) startGithub();
+        });
+
+        document.addEventListener('visibilitychange', () => {
+          if (document.hidden) {
+            stopGithub();
+          } else {
+            startGithub();
+          }
+        });
+
+        renderGithub(0);
+        syncGithubPlay();
+
+        /* Only run the slideshow while the carousel is on screen, so it always
+           opens on "Last year" instead of advancing while off screen. */
+        if ('IntersectionObserver' in window) {
+          const githubObserver = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+              githubInView = entry.isIntersecting;
+              if (!githubInView) {
+                stopGithub();
+              } else if (!githubStarted) {
+                githubStarted = true;
+                renderGithub(0);
+                startGithub();
+              }
+            });
+          }, { threshold: 0.45 });
+          githubObserver.observe(githubCarousel);
+        } else {
+          githubInView = true;
+          githubStarted = true;
+          startGithub();
+        }
+      }
+
+      /* Reveal-on-scroll with a light stagger */
+      const revealNodes = document.querySelectorAll('.section .section-label, .section .section-title, .section .section-desc, .conference-title, .conference-count, .about-card, .github-card, .info-tile, .skill-group, .timeline-item, .project-card, .edu-card, .global-tile, .photo-card, .cert-card, .contact-card');
+      revealNodes.forEach(node => node.classList.add('reveal'));
+
+      document.querySelectorAll('.row').forEach(row => {
+        [...row.children].forEach((col, index) => {
+          col.querySelectorAll('.reveal').forEach(el => {
+            el.style.transitionDelay = Math.min(index, 5) * 70 + 'ms';
+          });
+        });
+      });
+
+      if ('IntersectionObserver' in window && document.visibilityState !== 'hidden') {
+        const revealObserver = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              revealObserver.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12, rootMargin: '0px 0px -48px 0px' });
+        revealNodes.forEach(node => revealObserver.observe(node));
+
+        /* Safety net: never leave content permanently hidden */
+        setTimeout(() => {
+          document.querySelectorAll('.reveal:not(.is-visible)').forEach(node => {
+            if (node.getBoundingClientRect().top < window.innerHeight) {
+              node.classList.add('is-visible');
+            }
+          });
+        }, 1500);
+      } else {
+        revealNodes.forEach(node => node.classList.add('is-visible'));
+      }
     </script>
   </body>
 </html>
