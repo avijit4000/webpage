@@ -7,5 +7,5 @@
         "**/Thumbs.db": true,
         ".mule": true
     },
-    "liveServer.settings.multiRootWorkspaceName": "webpage"
+    "liveServer.settings.multiRootWorkspaceName": "profile"
 }
