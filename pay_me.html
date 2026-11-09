@@ -86,9 +86,9 @@
       }
       .flyer {
         display: block;
+        aspect-ratio: 3 / 5;
         overflow: hidden;
-        border: 1px solid rgba(111,137,190,.18);
-        border-radius: 18px;
+        border-radius: 16px;
         background: #fff;
         box-shadow: 0 16px 40px rgba(67,92,151,.14);
         transition: transform .25s ease, box-shadow .25s ease;
@@ -100,7 +100,8 @@
       .flyer img {
         display: block;
         width: 100%;
-        height: auto;
+        height: 100%;
+        object-fit: cover;
       }
       .flyer-caption {
         margin: .8rem 0 0;
