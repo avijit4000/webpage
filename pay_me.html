@@ -84,7 +84,7 @@
       .pay-form {
         min-width: 0;
       }
-      .flyer {
+      /* .flyer {
         display: block;
         aspect-ratio: 3 / 5;
         overflow: hidden;
@@ -108,8 +108,8 @@
         font-size: .82rem;
         color: #6b7a92;
         text-align: center;
-      }
-      .amounts {
+      } */
+      /* .amounts {
         display: flex;
         justify-content: center;
         gap: .75rem;
@@ -130,7 +130,7 @@
         color: #fff;
         background: #5b7cfa;
         border-color: #5b7cfa;
-      }
+      } */
       .field {
         display: block;
         margin-bottom: 1rem;
@@ -291,19 +291,12 @@
         <div class="pay-head">
           <div class="pay-icon" aria-hidden="true"><i class="bi bi-credit-card-fill"></i></div>
           <span class="eyebrow">Service Payment</span>
-          <h1 id="pay-title">Pay for Services</h1>
-          <p class="intro">Choose a service package or enter your custom amount. Share your details and payment information for AI automation, AI services, or web development work.</p>
+          <h1 id="pay-title">Secure Payment</h1>
+          <p class="intro">Please enter your payment details below to complete your transaction for professional services.</p>
         </div>
 
-        <div class="pay-layout">
-          <aside class="pay-visual" aria-label="Service overview">
-            <a class="flyer" href="image_screenshot.png" target="_blank" rel="noopener" aria-label="Open the Avijit Technology service flyer at full size">
-              <img src="image_screenshot.png" alt="Avijit Technology service agency flyer showing AI automation, web and software development, AI-powered financial analysis and business growth services with contact details" width="971" height="1619" loading="lazy">
-            </a>
-            <p class="flyer-caption">Avijit Technology — services at a glance</p>
-          </aside>
-
-          <form id="payForm" class="pay-form" novalidate>
+        <div class="pay-layout d-flex justify-content-center">
+          <form id="payForm" class="pay-form" style="max-width: 600px; width: 100%;" novalidate>
 
             <label class="field" for="customAmount">
               <span>Amount you want to pay</span>
@@ -378,24 +371,24 @@
         payButton.innerHTML = '<i class="bi bi-lock-fill"></i>Pay';
       }
 
-      amountButtons.forEach(button => {
-        button.addEventListener('click', () => {
-          amountButtons.forEach(item => item.classList.remove('active'));
-          button.classList.add('active');
-          const selectedAmount = Number(button.dataset.amount);
-          customAmountInput.value = selectedAmount;
-          updatePaymentButton();
-          paymentNote.textContent = '';
-          paymentNote.classList.remove('error');
-        });
-      });
-
-      customAmountInput.addEventListener('input', () => {
-        amountButtons.forEach(item => item.classList.remove('active'));
-        updatePaymentButton();
-        paymentNote.textContent = '';
-        paymentNote.classList.remove('error');
-      });
+      // amountButtons.forEach(button => {
+      //   button.addEventListener('click', () => {
+      //     amountButtons.forEach(item => item.classList.remove('active'));
+      //     button.classList.add('active');
+      //     const selectedAmount = Number(button.dataset.amount);
+      //     customAmountInput.value = selectedAmount;
+      //     updatePaymentButton();
+      //     paymentNote.textContent = '';
+      //     paymentNote.classList.remove('error');
+      //   });
+      // });
+      //
+      // customAmountInput.addEventListener('input', () => {
+      //   amountButtons.forEach(item => item.classList.remove('active'));
+      //   updatePaymentButton();
+      //   paymentNote.textContent = '';
+      //   paymentNote.classList.remove('error');
+      // });
 
       form.addEventListener('submit', function (event) {
         event.preventDefault();
