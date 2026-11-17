@@ -23,15 +23,59 @@
         flex-direction: column;
         background: radial-gradient(circle at 10% 0%, rgba(91,124,250,.14), transparent 32rem), radial-gradient(circle at 92% 80%, rgba(42,199,201,.14), transparent 28rem), #f7faff;
       }
+      [data-theme="dark"] .pay-page {
+        background: radial-gradient(circle at 10% 0%, rgba(79,109,245,.28), transparent 32rem), radial-gradient(circle at 92% 80%, rgba(15,163,163,.22), transparent 28rem), #0a0e1f;
+        color: #e6e9f5;
+      }
+      [data-theme="dark"] .pay-card {
+        background: rgba(20,26,48,.86);
+        border-color: rgba(120,140,200,.22);
+      }
+      [data-theme="dark"] .pay-card h1,
+      [data-theme="dark"] .pay-card .eyebrow,
+      [data-theme="dark"] .pay-visual h1,
+      [data-theme="dark"] .pay-visual .eyebrow {
+        color: #f0f3ff;
+      }
+      [data-theme="dark"] .pay-card .intro,
+      [data-theme="dark"] .field span,
+      [data-theme="dark"] .field input,
+      [data-theme="dark"] .field textarea,
+      [data-theme="dark"] .checkbox-row span {
+        color: #c8d0e6;
+      }
+      [data-theme="dark"] .field input,
+      [data-theme="dark"] .field textarea,
+      [data-theme="dark"] .amount-input-wrap {
+        background: #161c33;
+        border-color: rgba(120,140,200,.24);
+        color: #e6e9f5;
+      }
+      [data-theme="dark"] .refund-box {
+        background: #161c33;
+        border-color: rgba(120,140,200,.22);
+      }
+      [data-theme="dark"] .refund-box h3,
+      [data-theme="dark"] .refund-box ul,
+      [data-theme="dark"] .refund-box li {
+        color: #c8d0e6;
+      }
+      [data-theme="dark"] .footer {
+        background: #0a0e1f;
+        color: #9aa3bd;
+      }
+      [data-theme="dark"] .footer a {
+        color: #c8d0e6;
+      }
       .pay-main {
         flex: 1;
         display: grid;
         place-items: center;
-        padding: 4rem 1rem;
+        padding: 2rem 1rem;
       }
       .pay-card {
         width: min(100%, 1060px);
-        padding: clamp(1.5rem, 4vw, 3rem);
+        padding: clamp(1rem, 2.5vw, 1.5rem);
         background: rgba(255,255,255,.9);
         border: 1px solid rgba(111,137,190,.16);
         border-radius: 28px;
@@ -44,22 +88,22 @@
         text-align: left;
       }
       .pay-icon {
-        width: 88px;
-        height: 88px;
+        width: 56px;
+        height: 56px;
         display: grid;
         place-items: center;
-        margin: 0 0 1.2rem 0; /* Changed from 0 auto 1.2rem */
-        border-radius: 22px;
+        margin: 0 0 .9rem 0; /* Changed from 0 auto 1.2rem */
+        border-radius: 18px;
         color: #fff;
-        font-size: 2.5rem;
+        font-size: 1.6rem;
         background: linear-gradient(135deg, #5b7cfa, #2ac7c9);
-        box-shadow: 0 15px 32px rgba(91,124,250,.27);
+        box-shadow: 0 12px 28px rgba(91,124,250,.27);
       }
       .eyebrow {
         display: inline-block;
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.4rem;
         color: #4263e8;
-        font-size: .8rem;
+        font-size: .72rem;
         font-weight: 700;
         letter-spacing: .12em;
         text-transform: uppercase;
@@ -69,19 +113,21 @@
         font-family: 'Space Grotesk', sans-serif;
         font-weight: 700;
         letter-spacing: -.04em;
-        margin-bottom: .5rem;
+        margin-bottom: .4rem;
+        font-size: clamp(1.6rem, 3vw, 2rem);
       }
       .pay-card .intro {
         max-width: 560px;
-        margin: 0 auto 2rem;
+        margin: 0 auto 1.2rem;
         color: #6b7a92;
+        font-size: .9rem;
       }
       .pay-layout {
         display: grid;
         grid-template-columns: minmax(240px, .7fr) minmax(0, 1.3fr);
-        gap: clamp(1.5rem, 3vw, 2.5rem);
+        gap: clamp(1rem, 2vw, 1.5rem);
         align-items: start;
-        margin-top: .5rem;
+        margin-top: .4rem;
         text-align: left;
       }
       .pay-form {
@@ -280,11 +326,21 @@
     </style>
   </head>
   <body class="pay-page">
-    <header class="site-header">
+    <header class="site-header sticky-top">
       <div class="container-lg">
-        <nav class="navbar px-0">
-          <a class="navbar-brand" href="index.html#home"><span class="brand-mark">AB</span><span class="brand-text">Avijit Biswas</span></a>
-          <a href="index.html" class="btn btn-outline-primary btn-sm nav-cta"><i class="bi bi-arrow-left me-1"></i>Back to site</a>
+        <nav class="navbar px-0 d-flex justify-content-between align-items-center">
+          <a class="navbar-brand" href="index.html#home">
+            <span class="brand-mark">AB</span>
+            <span class="brand-text">Avijit Biswas</span>
+          </a>
+          <div class="header-actions d-flex align-items-center gap-2">
+            <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark mode" aria-pressed="false" title="Switch to dark mode">
+              <i class="bi bi-moon-stars-fill" aria-hidden="true"></i>
+            </button>
+            <a href="index.html" class="btn btn-outline-primary btn-sm nav-cta" style="margin-left: 76px;">
+              <i class="bi bi-arrow-left me-1"></i>Back to Home
+            </a>
+          </div>
         </nav>
       </div>
     </header>
@@ -363,8 +419,43 @@
     </footer>
 
     <script>
+      try {
+        if (localStorage.getItem('theme') === 'dark') {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      } catch (error) {}
+
+      document.addEventListener('DOMContentLoaded', () => {
+        const themeToggle = document.getElementById('themeToggle');
+        if (themeToggle) {
+          const themeIcon = themeToggle.querySelector('i');
+          const syncThemeToggle = () => {
+            const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+            const label = isDark ? 'Switch to light mode' : 'Switch to dark mode';
+            themeToggle.setAttribute('aria-pressed', String(isDark));
+            themeToggle.setAttribute('aria-label', label);
+            themeToggle.setAttribute('title', label);
+            if (themeIcon) {
+              themeIcon.className = isDark ? 'bi bi-sun-fill' : 'bi bi-moon-stars-fill';
+            }
+          };
+          syncThemeToggle();
+          themeToggle.addEventListener('click', () => {
+            const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+            if (isDark) {
+              document.documentElement.removeAttribute('data-theme');
+            } else {
+              document.documentElement.setAttribute('data-theme', 'dark');
+            }
+            try {
+              localStorage.setItem('theme', isDark ? 'light' : 'dark');
+            } catch (error) {}
+            syncThemeToggle();
+          });
+        }
+      });
+
       const form = document.getElementById('payForm');
-      const amountButtons = document.querySelectorAll('.amount');
       const customAmountInput = document.getElementById('customAmount');
       const payButton = document.querySelector('.pay-button');
       const paymentNote = document.getElementById('paymentNote');
