@@ -40,12 +40,15 @@
       .pay-head {
         text-align: center;
       }
+      .pay-visual {
+        text-align: left;
+      }
       .pay-icon {
         width: 88px;
         height: 88px;
         display: grid;
         place-items: center;
-        margin: 0 auto 1.2rem;
+        margin: 0 0 1.2rem 0; /* Changed from 0 auto 1.2rem */
         border-radius: 22px;
         color: #fff;
         font-size: 2.5rem;
@@ -288,15 +291,17 @@
 
     <main class="pay-main">
       <section class="pay-card" aria-labelledby="pay-title">
-        <div class="pay-head">
-          <div class="pay-icon" aria-hidden="true"><i class="bi bi-credit-card-fill"></i></div>
-          <span class="eyebrow">Service Payment</span>
-          <h1 id="pay-title">Secure Payment</h1>
-          <p class="intro">Please enter your payment details below to complete your transaction for professional services.</p>
+        <div class="pay-head" style="text-align: left; margin-bottom: 2rem;">
+          <h1 id="pay-title">Pay Now</h1>
         </div>
 
-        <div class="pay-layout d-flex justify-content-center">
-          <form id="payForm" class="pay-form" style="max-width: 600px; width: 100%;" novalidate>
+        <div class="pay-layout">
+          <aside class="pay-visual" aria-label="Service status">
+            <div class="pay-icon" aria-hidden="true"><i class="bi bi-credit-card-fill"></i></div>
+            <span class="eyebrow" style="display: block;">SERVICE PAYMENT</span>
+          </aside>
+
+          <form id="payForm" class="pay-form" novalidate>
 
             <label class="field" for="customAmount">
               <span>Amount you want to pay</span>
