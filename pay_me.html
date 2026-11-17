@@ -25,13 +25,14 @@
       }
       .pay-main {
         flex: 1;
-        display: grid;
-        place-items: center;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
         padding: 4rem 1rem;
       }
       .pay-card {
-        width: min(100%, 1060px);
-        padding: clamp(1.5rem, 4vw, 3rem);
+        width: min(100%, 700px); /* Adjusted width */
+        padding: clamp(1rem, 3vw, 2rem); /* Adjusted padding */
         background: rgba(255,255,255,.9);
         border: 1px solid rgba(111,137,190,.16);
         border-radius: 28px;
@@ -292,63 +293,47 @@
     <main class="pay-main">
       <section class="pay-card" aria-labelledby="pay-title">
         <div class="pay-layout">
-          <aside class="pay-visual" aria-label="Service status">
-            <div class="pay-icon" aria-hidden="true"><i class="bi bi-credit-card-fill"></i></div>
-            <span class="eyebrow" style="display: block; margin-bottom: 0.5rem;">SERVICE PAYMENT</span>
-            <h1 id="pay-title" style="font-size: 2.5rem;">Pay Now</h1>
-          </aside>
+          <div class="pay-head" style="text-align: left; margin-bottom: 2rem;">
+            <h1 id="pay-title" style="font-size: 2rem;">Payment Details</h1>
+          </div>
 
           <form id="payForm" class="pay-form" novalidate>
 
-            <label class="field" for="customAmount">
-              <span>Amount you want to pay</span>
-              <div class="amount-input-wrap">
-                <span>₹</span>
-                <input id="customAmount" name="amount" type="number" min="1" step="1" value="1000" placeholder="2500" required>
-              </div>
+            <label class="field" for="cardNumber">
+              <span>Card Number</span>
+              <input id="cardNumber" name="cardNumber" type="text" placeholder="0000 0000 0000 0000" required>
             </label>
 
             <div class="two-col">
-              <label class="field" for="customerName">
-                <span>Full name</span>
-                <input id="customerName" name="name" type="text" placeholder="Your name" required>
+              <label class="field" for="expiry">
+                <span>Expiry</span>
+                <input id="expiry" name="expiry" type="text" placeholder="MM/YY" required>
               </label>
 
-              <label class="field" for="customerEmail">
-                <span>Email address</span>
-                <input id="customerEmail" name="email" type="email" placeholder="your@email.com" required>
+              <label class="field" for="securityCode">
+                <span>Security Code</span>
+                <input id="securityCode" name="securityCode" type="text" placeholder="CVV" required>
               </label>
             </div>
 
-            <label class="field" for="serviceId">
-              <span>Service ID (optional)</span>
-              <input id="serviceId" name="serviceId" type="text" placeholder="e.g. AI-001, WEB-101, AUTOMATION-7">
+            <label class="field" for="customerName">
+              <span>Cardholder Name</span>
+              <input id="customerName" name="name" type="text" placeholder="Full name on card" required>
             </label>
 
-            <label class="field" for="customerMessage">
-              <span>Message</span>
-              <textarea id="customerMessage" name="message" placeholder="Describe the service requirement, project details, or any notes..."></textarea>
+            <label class="checkbox-row" for="saveCard">
+              <input id="saveCard" type="checkbox">
+              <span>Save card details for future transactions.</span>
             </label>
 
-            <label class="checkbox-row" for="refundPolicy">
-              <input id="refundPolicy" type="checkbox" required>
-              <span>I agree to the refund policy and understand that payment support is voluntary.</span>
-            </label>
-
-            <button class="pay-button" type="submit"><i class="bi bi-lock-fill"></i>Pay</button>
+            <button class="pay-button" type="submit"><i class="bi bi-lock-fill"></i> PAY NOW</button>
             <p class="payment-note" id="paymentNote" aria-live="polite"></p>
           </form>
         </div>
 
         <div class="refund-box">
-          <h3>Refund Policy</h3>
-          <ul>
-            <li>Refunds are only considered for duplicate, incorrect, or accidental payments within 7 days of the transaction.</li>
-            <li>Payments made as a support contribution are generally non-refundable once the payment has been successfully processed.</li>
-            <li>Refund requests must include the transaction ID, payment date, and the reason for the refund request.</li>
-            <li>All refund decisions are reviewed case by case and will be returned to the original payment method within 5–10 business days.</li>
-            <li>For disputes or payment issues, contact support with your name, email, amount paid, and transaction reference.</li>
-          </ul>
+          <h3>Payment Security</h3>
+          <p>Your payment information is handled securely. By clicking PAY NOW, you agree to our terms and conditions.</p>
         </div>
       </section>
     </main>
@@ -364,79 +349,41 @@
 
     <script>
       const form = document.getElementById('payForm');
-      const amountButtons = document.querySelectorAll('.amount');
-      const customAmountInput = document.getElementById('customAmount');
       const payButton = document.querySelector('.pay-button');
       const paymentNote = document.getElementById('paymentNote');
 
       function updatePaymentButton() {
-        payButton.innerHTML = '<i class="bi bi-lock-fill"></i>Pay';
+        payButton.innerHTML = '<i class="bi bi-lock-fill"></i> PAY NOW';
       }
-
-      // amountButtons.forEach(button => {
-      //   button.addEventListener('click', () => {
-      //     amountButtons.forEach(item => item.classList.remove('active'));
-      //     button.classList.add('active');
-      //     const selectedAmount = Number(button.dataset.amount);
-      //     customAmountInput.value = selectedAmount;
-      //     updatePaymentButton();
-      //     paymentNote.textContent = '';
-      //     paymentNote.classList.remove('error');
-      //   });
-      // });
-      //
-      // customAmountInput.addEventListener('input', () => {
-      //   amountButtons.forEach(item => item.classList.remove('active'));
-      //   updatePaymentButton();
-      //   paymentNote.textContent = '';
-      //   paymentNote.classList.remove('error');
-      // });
+      updatePaymentButton();
 
       form.addEventListener('submit', function (event) {
         event.preventDefault();
 
-        const name = document.getElementById('customerName').value.trim();
-        const email = document.getElementById('customerEmail').value.trim();
-        const serviceId = document.getElementById('serviceId').value.trim();
-        const amount = Number(customAmountInput.value);
-        const message = document.getElementById('customerMessage').value.trim();
-        const refundChecked = document.getElementById('refundPolicy').checked;
+        const cardNumber = document.getElementById('cardNumber').value.trim();
+        const expiry = document.getElementById('expiry').value.trim();
+        const securityCode = document.getElementById('securityCode').value.trim();
+        const cardholderName = document.getElementById('customerName').value.trim();
+        const saveCard = document.getElementById('saveCard').checked;
 
-        if (!name || !email || !amount || amount <= 0 || !refundChecked) {
-          const reason = !name ? 'Please provide your full name.' : !email ? 'Please provide a valid email address.' : !amount || amount <= 0 ? 'Please enter a valid payment amount.' : 'Please accept the refund policy before proceeding.';
-          paymentNote.textContent = reason;
+        // **SECURITY WARNING**: In a real application, sensitive card details should NEVER be handled client-side.
+        // This data must be sent directly to a secure payment gateway (e.g., Stripe, PayPal) from the client.
+        // Server-side processing is required for secure payment handling.
+        if (!cardNumber || !expiry || !securityCode || !cardholderName) {
+          paymentNote.textContent = 'Please fill in all payment details.';
           paymentNote.classList.add('error');
-
-          const params = new URLSearchParams({
-            status: 'failure',
-            reason: reason
-          });
-
-          window.location.href = 'payment-status.html?' + params.toString();
-          return;
-        }
-
-        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailPattern.test(email)) {
-          const reason = 'Please enter a valid email address.';
-          paymentNote.textContent = reason;
-          paymentNote.classList.add('error');
-          window.location.href = 'payment-status.html?status=failure&reason=' + encodeURIComponent(reason);
           return;
         }
 
         const txnId = 'TXN-' + Date.now().toString().slice(-8);
-        const amountText = '₹' + amount;
         const params = new URLSearchParams({
           status: 'success',
           txn: txnId,
-          amount: amountText,
-          name: name,
-          email: email,
-          serviceId: serviceId || 'Not provided',
-          message: message || 'No message provided'
+          name: cardholderName,
+          saveCard: saveCard
         });
 
+        // Redirect to a payment status page (for demonstration purposes)
         window.location.href = 'payment-status.html?' + params.toString();
       });
     </script>
